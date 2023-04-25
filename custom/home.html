@@ -1,0 +1,152 @@
+{% extends "main.html" %}
+{% block extrahead %}
+<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
+  rel="stylesheet"
+/>
+<style>
+  a {
+    color: inherit !important;
+  }
+</style>
+{% endblock %}
+
+{% block tabs %}
+  {{ super() }}
+
+  <style>
+    .md-header{
+      position:initial
+    }
+    .md-main__inner{
+      margin:0
+    }
+    .md-content{
+      display:none
+    }
+    @media screen and (min-width:60em){
+      .md-sidebar--secondary{
+        display:none
+      }
+    }
+    @media screen and (min-width:76.25em){
+      .md-sidebar--primary
+      {
+        display:none
+      }
+    }
+    body {
+      background-color: #fbfbfb;
+    }
+    .bg-theme {
+      background-color: #7446ac !important;
+    }
+
+    .text-theme {
+      color: #7446ac !important;
+    }
+
+    .border-theme {
+      border: 2px solid #7446ac !important;
+    }
+
+    .btn-secondary-theme {
+      color: hsl(267, 42%, 47%);
+      box-shadow: none !important;
+      background-color: hsl(263, 50%, 94%);
+
+    }
+
+    .btn-secondary-theme:hover,
+    .btn-secondary-theme:focus {
+      background-color: hsl(267, 70%, 95%);
+      color: hsl(267, 42%, 37%);
+    }
+
+  </style>
+
+<main class="mdb-docs-layout">
+<div class="container mt-5  mt-5  ">
+<section class="mt-md-4">
+  <div class="row">
+    <div class="col-md-6 mb-4 mb-md-0 d-flex align-items-center">
+      <div>
+        <h1 class="fw-bold h2">
+          Material Design <br>
+          <small class="text-theme">for Bootstrap 5 &amp; Vanilla JavaScript</small>
+        </h1>
+        <p class="text-muted">
+          Standard Bootstrap version built with plain JS (but works also
+          with jQuery)
+        </p>
+        <div class="">
+          <ol class="list-unstyled my-5 text-muted">
+            <li class="mb-3">
+              <a href="https://mdbootstrap.com/docs/standard/" class="text-reset">
+                <i class="fas fa-check text-theme me-2"></i>700+ UI
+                components &amp; templates
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="https://mdbootstrap.com/docs/standard/getting-started/installation/" class="text-reset">
+                <i class="fas fa-check text-theme me-2"></i>Super simple, 1 minute installation</a>
+            </li>
+            <li class="mb-3">
+              <i class="fas fa-check text-theme me-2"></i>Easy theming and customization
+            </li>
+            <li class="">
+              <i class="fas fa-check text-theme me-2"></i>MIT license -
+              free for personal &amp; commercial use
+            </li>
+          </ol>
+
+          <a class="btn btn-lg bg-theme text-white me-3" href="/docs/standard/getting-started/installation/" role="button">Get
+            started</a>
+
+          <a class="btn btn-secondary-theme btn-lg me-3" data-mdb-smooth-scroll="smooth-scroll" data-mdb-offset="25"
+            data-mdb-ripple-color="hsl(265, 81.4%, 53.5%)" href="#demo" role="button">Demo</a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4 mb-md-0 d-flex align-items-center">
+      <div class="bg-image hover-overlay ripple shadow-3 rounded-7" data-ripple-color="light">
+        <img
+          src="assets/pic/k2.png"
+          class="w-100" alt="MDBootstrap 5 Quick Start" />
+        <a href="https://www.youtube.com/watch?v=hb5ypV0ZHt0&list=PLl1gkwYU90QkeAAHno3iVJokh2evwMwaX&ab_channel=Keepcoding"
+          rel="nofollow" target="_blank">
+          <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+</main>
+
+{% endblock %}
+
+{% block content %}{% endblock %}
+{% block footer %}{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <!-- MDB -->
+  <script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"
+  ></script>
+{% endblock %}
