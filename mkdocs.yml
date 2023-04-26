@@ -1,6 +1,16 @@
+# Project information
 site_name: Next-gen Kaldi
+site_url: https://k2-fsa.org
+site_author: Next-gen Kaldi team
+site_description: >-
+  Next-gen Kaldi
 
+# Repository
+repo_name: https://github.com/k2-fsa
 repo_url: https://github.com/k2-fsa
+
+# Copyright
+copyright: Copyright &copy; 2019 - 2023 Next-gen Kaldi team
 
 theme:
   name: material
@@ -32,10 +42,13 @@ nav:
     - Installation: getting-started.md
     - Support: browser-support.md
     - Custom: customization.md
-  - Docs:
-    - k2: https://k2-fsa.github.io/k2/
-    - icefall: https://k2-fsa.github.io/k2/
-    - lhotse: https://k2-fsa.github.io/k2/
+  - Installation: installation.md
+  - Docs: docs.md
+  - Demo: demo.md
+  - Models: models.md
+  - Tutorials:
+    - Train a model: docs.md
+    - Deploy: docs.md
 
 
 # Extensions
@@ -79,3 +92,20 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/squidfunk
+    - icon: fontawesome/brands/gitter
+      link: https://gitter.im/squidfunk/mkdocs-material
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/r/squidfunk/mkdocs-material/
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/mkdocs-material/
+    - icon: fontawesome/brands/mastodon
+      link: https://fosstodon.org/@squidfunk
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/squidfunk
