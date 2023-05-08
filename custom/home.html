@@ -62,11 +62,24 @@
       background-color: hsl(267, 70%, 95%);
       color: hsl(267, 42%, 37%);
     }
+    .card-body{
+      padding: 10px;
+    }
+    .card-text {
+      font-size: 0.75rem;
+    }
+    .card-img-top {
+      width: 60%;
+      padding: 10px 10px 0px 10px;
+    }
+    .card {
+      align-items: center;
+    }
   </style>
 
 <main class="mdb-docs-layout">
-<div class="container mt-5  mt-5  ">
-<section class="mt-md-4">
+<div class="container mt-5 mt-5  ">
+<section style="min-height: 90vh" class="mt-md-4">
   <div class="row">
     <div class="col-md-6 mb-4 mb-md-0 d-flex align-items-center">
       <div>
@@ -116,13 +129,117 @@
     </div>
   </div>
 </section>
+
+<section class="mt-md-4">
+    <div style="padding: 20px">
+        <h1 class="fw-bold h3">
+          Projects
+        </h1>
+    </div>
+    <div class="d-flex">
+    <div class="p-1 flex-fill">
+    <div class="card">
+       <img src="assets/pic/k2_logo.png" class="card-img-top"/>
+       <div class="card-body">
+         <h5 class="card-title">k2</h5>
+         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+         <a href="#!">Button</a>
+       </div>
+     </div>
+    </div>
+
+    <div class="p-1 flex-fill">
+    <div class="card">
+       <img src="assets/pic/icefall_logo.png" class="card-img-top"/>
+       <div class="card-body">
+         <h5 class="card-title">icefall</h5>
+         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+         <a href="#!">Button</a>
+       </div>
+     </div>
+    </div>
+
+    <div class="p-1 flex-fill">
+    <div class="card">
+       <img src="assets/pic/lhotse_logo.png" class="card-img-top"/>
+       <div class="card-body">
+         <h5 class="card-title">lhotse</h5>
+         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+         <a href="#!" >Button</a>
+       </div>
+     </div>
+    </div>
+
+    <div class="p-1 flex-fill">
+    <div class="card">
+       <img src="assets/pic/kaldi_logo.png" class="card-img-top"/>
+       <div class="card-body">
+         <h5 class="card-title">sherpa</h5>
+         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+         <a href="#!" >Button</a>
+       </div>
+     </div>
+    </div>
+  </div>
+
+  <div class="d-flex">
+    <div class="p-1 flex-fill">
+    <div class="card">
+       <div class="card-body">
+         <h5 class="card-title">fast rnnt</h5>
+         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+         <a href="#!">Button</a>
+       </div>
+     </div>
+    </div>
+
+    <div class="p-1 flex-fill">
+    <div class="card">
+       <div class="card-body">
+         <h5 class="card-title">text search</h5>
+         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+         <a href="#!">Button</a>
+       </div>
+     </div>
+    </div>
+
+    <div class="p-1 flex-fill">
+    <div class="card">
+       <div class="card-body">
+         <h5 class="card-title">divide lm</h5>
+         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+         <a href="#!" >Button</a>
+       </div>
+     </div>
+    </div>
+
+    <div class="p-1 flex-fill">
+    <div class="card">
+       <div class="card-body">
+         <h5 class="card-title">multi-quantization</h5>
+         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+         <a href="#!" >Button</a>
+       </div>
+     </div>
+    </div>
+
+    <div class="p-1 flex-fill">
+    <div class="card">
+       <div class="card-body">
+         <h5 class="card-title">kaldifst</h5>
+         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+         <a href="#!" >Button</a>
+       </div>
+     </div>
+  </div>
+  </div>
+</section>
 </div>
 </main>
 
 {% endblock %}
 
 {% block content %}{% endblock %}
-{% block footer %}{% endblock %}
 
 {% block scripts %}
   <!-- MDB -->
