@@ -1,13 +1,16 @@
 {% extends "main.html" %}
-{% block extrahead %}
+
+{% block styles %}
+{{ super() }}
+  <style>
+    a {
+      color: inherit !important;
+    }
+  </style>
 <!-- MDB -->
 <link href="assets/stylesheets/mdb.min.css" rel="stylesheet">
-<style>
-  a {
-    color: inherit !important;
-  }
-</style>
 {% endblock %}
+
 
 {% block tabs %}
   {{ super() }}
@@ -52,7 +55,6 @@
       color: hsl(267, 42%, 47%);
       box-shadow: none !important;
       background-color: hsl(263, 50%, 94%);
-
     }
 
     .btn-secondary-theme:hover,
@@ -60,7 +62,6 @@
       background-color: hsl(267, 70%, 95%);
       color: hsl(267, 42%, 37%);
     }
-
   </style>
 
 <main class="mdb-docs-layout">
@@ -69,41 +70,35 @@
   <div class="row">
     <div class="col-md-6 mb-4 mb-md-0 d-flex align-items-center">
       <div>
-        <h1 class="fw-bold h2">
-          Material Design <br>
-          <small class="text-theme">for Bootstrap 5 &amp; Vanilla JavaScript</small>
+        <h1 class="fw-bold h3">
+          Next-gen Kaldi <br>
+          <small class="text-theme h4">for advanced &amp; efficient automatic speech recognition</small>
         </h1>
         <p class="text-muted">
-          Standard Bootstrap version built with plain JS (but works also
-          with jQuery)
+          k2 Lhotse Icefall Sherpa
         </p>
         <div class="">
           <ol class="list-unstyled my-5 text-muted">
             <li class="mb-3">
-              <a href="https://mdbootstrap.com/docs/standard/" class="text-reset">
-                <i class="fas fa-check text-theme me-2"></i>700+ UI
-                components &amp; templates
-              </a>
+                <i class="fas fa-check text-theme me-2"></i> fast training
             </li>
             <li class="mb-3">
-              <a href="https://mdbootstrap.com/docs/standard/getting-started/installation/" class="text-reset">
-                <i class="fas fa-check text-theme me-2"></i>Super simple, 1 minute installation</a>
+                <i class="fas fa-check text-theme me-2"></i> zipformer
             </li>
             <li class="mb-3">
-              <i class="fas fa-check text-theme me-2"></i>Easy theming and customization
+              <i class="fas fa-check text-theme me-2"></i> Easy to use
             </li>
             <li class="">
-              <i class="fas fa-check text-theme me-2"></i>MIT license -
+              <i class="fas fa-check text-theme me-2"></i> Apache-2.0 license -
               free for personal &amp; commercial use
             </li>
           </ol>
 
-          <a class="btn btn-lg bg-theme text-white me-3" href="/docs/standard/getting-started/installation/" role="button">Get
+          <a class="btn btn-lg bg-theme text-white me-3" href="/getting-started/" role="button">Get
             started</a>
 
           <a class="btn btn-secondary-theme btn-lg me-3" data-mdb-smooth-scroll="smooth-scroll" data-mdb-offset="25"
-            data-mdb-ripple-color="hsl(265, 81.4%, 53.5%)" href="#demo" role="button">Demo</a>
-
+            data-mdb-ripple-color="hsl(265, 81.4%, 53.5%)" href="/demo/" role="button">Demo</a>
         </div>
       </div>
     </div>
@@ -112,8 +107,8 @@
       <div class="bg-image hover-overlay ripple shadow-3 rounded-7" data-ripple-color="light">
         <img
           src="assets/pic/k2.png"
-          class="w-100" alt="MDBootstrap 5 Quick Start" />
-        <a href="https://www.youtube.com/watch?v=hb5ypV0ZHt0&list=PLl1gkwYU90QkeAAHno3iVJokh2evwMwaX&ab_channel=Keepcoding"
+          class="w-100" alt="" />
+        <a href=""
           rel="nofollow" target="_blank">
           <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
         </a>
@@ -130,7 +125,9 @@
 {% block footer %}{% endblock %}
 
 {% block scripts %}
-  {{ super() }}
   <!-- MDB -->
   <script type="text/javascript" src="assets/javascripts/mdb.min.js"></script>
+
+  {{ super() }}
+
 {% endblock %}
