@@ -49,14 +49,28 @@ nav:
     - Installation: getting-started.md
     - Support: browser-support.md
     - Custom: customization.md
-  - Installation: installation.md
-  - Docs: docs.md
-  - Demo: demo.md
-  - Models: models.md
+  - Installation:
+    - k2: installation/k2.md
+    - icefall: installation/icefall.md
+    - lhotse: installation/lhotse.md
+    - sherpa: installation/sherpa.md
+    - sherpa-ncnn: installation/sherpa-ncnn.md
+    - sherpa-onnx: installation/sherpa-onnx.md
   - Tutorials:
-    - tutorials/index.md
+    - Tutorials: tutorials/index.md
     - Train a model: tutorials/train.md
     - Deploy: tutorials/deploy.md
+    - Build an Android demo: tutorials/android.md
+  - Docs:
+    - k2: docs/k2.md
+    - lhotse: docs/lhotse.md
+    - icefall: docs/icefall.md
+    - sherpa: docs/sherpa.md
+    - sherpa-ncnn: docs/sherpa-ncnn.md
+    - sherpa-onnx: docs/sherpa-onnx.mc
+  - Demo: demo.md
+  - Models: models.md
+  
 
 
 # Extensions

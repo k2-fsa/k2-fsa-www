@@ -1,6 +1,5 @@
 ---
 template: home.html
-title: Material for MkDocs
+title: Next-gen Kaldi
 ---
 
-Welcome to Material for MkDocs.
