@@ -49,10 +49,7 @@ extra_css:
 # Page tree
 nav:
   - Home: index.md
-  - Getting started:
-    - Installation: getting-started.md
-    - Support: browser-support.md
-    - Custom: customization.md
+  - Getting started: getting-started.md
   - Installation:
     - k2: installation/k2.md
     - icefall: installation/icefall.md
