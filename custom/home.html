@@ -81,6 +81,27 @@
       background-color: transparent;
       box-shadow: none;
     }
+
+    .card-body a:link {
+      color: #005dc1 !important;
+      background-color: transparent;
+      text-decoration: none;
+    }
+    .card-body a:visited {
+      color: #7446ac !important;
+      background-color: transparent;
+      text-decoration: none;
+    }
+    .card-body a:hover {
+      color: #7446ac !important;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    .card-body a:active {
+      color: #005dc1 !important;
+      background-color: transparent;
+      text-decoration: underline;
+    }
   </style>
 
 <main class="mdb-docs-layout">
@@ -133,19 +154,19 @@
             data-mdb-slide-to="0"
             class="active"
             aria-current="true"
-            aria-label="Slide 1"
+            aria-label="k2"
           ></button>
           <button
             type="button"
             data-mdb-target="#k2carousel"
             data-mdb-slide-to="1"
-            aria-label="Slide 2"
+            aria-label="lhotse"
           ></button>
           <button
             type="button"
             data-mdb-target="#k2carousel"
             data-mdb-slide-to="2"
-            aria-label="Slide 3"
+            aria-label="icefall"
           ></button>
         </div>
       
@@ -182,12 +203,12 @@
       
         <!-- Controls -->
         <button class="carousel-control-prev" type="button" data-mdb-target="#k2carousel" data-mdb-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-          <span class="visually-hidden">Previous</span>
+          <!-- <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Previous</span> -->
         </button>
         <button class="carousel-control-next" type="button" data-mdb-target="#k2carousel" data-mdb-slide="next">
-          <span class="carousel-control-next-icon"></span>
-          <span class="visually-hidden">Next</span>
+          <!-- <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Next</span> -->
         </button>
       </div>
       <!-- Carousel wrapper -->
@@ -207,8 +228,9 @@
        <img src="assets/pic/k2_logo.png" class="card-img-top"/>
        <div class="card-body">
          <h5 class="card-title">k2</h5>
-         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-         <a href="#!">Button</a>
+         <p class="card-text">FSA/FST algorithms, differentiable, with PyTorch compatibility.</p>
+         <a href="https://github.com/k2-fsa/k2">Code</a>
+         <a href="https://k2-fsa.github.io/k2/">Docs</a>
        </div>
      </div>
     </div>
@@ -218,8 +240,9 @@
        <img src="assets/pic/icefall_logo.png" class="card-img-top"/>
        <div class="card-body">
          <h5 class="card-title">icefall</h5>
-         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-         <a href="#!">Button</a>
+         <p class="card-text">Various of recipes built based on k2, lhotse and pytorch.</p>
+         <a href="https://github.com/k2-fsa/icefall">Code</a>
+         <a href="https://k2-fsa.github.io/icefall/">Docs</a>
        </div>
      </div>
     </div>
@@ -229,8 +252,9 @@
        <img src="assets/pic/lhotse_logo.png" class="card-img-top"/>
        <div class="card-body">
          <h5 class="card-title">lhotse</h5>
-         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-         <a href="#!" >Button</a>
+         <p class="card-text">Tools for handling speech data in machine learning projects.</p>
+         <a href="https://github.com/lhotse-speech/lhotse">Code</a>
+         <a href="https://lhotse.readthedocs.io/en/latest/">Docs</a>
        </div>
      </div>
     </div>
@@ -240,8 +264,11 @@
        <img src="assets/pic/kaldi_logo.png" class="card-img-top"/>
        <div class="card-body">
          <h5 class="card-title">sherpa</h5>
-         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-         <a href="#!" >Button</a>
+         <p class="card-text">Speech-to-text server framework with next-gen Kaldi</p>
+         <a href="https://github.com/k2-fsa/sherpa">Pytorch</a>
+         <a href="https://github.com/k2-fsa/sherpa-onnx">ONNX</a>
+         <a href="https://github.com/k2-fsa/sherpa-ncnn">NCNN</a>
+         <a href="https://k2-fsa.github.io/sherpa/">Docs</a>
        </div>
      </div>
     </div>
@@ -252,8 +279,8 @@
     <div class="card">
        <div class="card-body">
          <h5 class="card-title">fast rnnt</h5>
-         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-         <a href="#!">Button</a>
+         <p class="card-text">A torch implementation of a recursion which turns out to be useful for RNN-T.</p>
+         <a href="https://github.com/danpovey/fast_rnnt">Code</a>
        </div>
      </div>
     </div>
@@ -262,8 +289,8 @@
     <div class="card">
        <div class="card-body">
          <h5 class="card-title">text search</h5>
-         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-         <a href="#!">Button</a>
+         <p class="card-text">Some fast-ish algorithms for batch text search in moderate-sized collections, intended for data cleanup.</p>
+         <a href="https://github.com/k2-fsa/text_search">Code</a>
        </div>
      </div>
     </div>
@@ -272,8 +299,8 @@
     <div class="card">
        <div class="card-body">
          <h5 class="card-title">divide lm</h5>
-         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-         <a href="#!" >Button</a>
+         <p class="card-text">Divide a higher order language model with a lower order language model.</p>
+         <a href="https://github.com/k2-fsa/devide_lm">Code</a>
        </div>
      </div>
     </div>
@@ -282,8 +309,8 @@
     <div class="card">
        <div class="card-body">
          <h5 class="card-title">multi-quantization</h5>
-         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-         <a href="#!" >Button</a>
+         <p class="card-text">Implements a utility for use with PyTorch, for training an efficient quantizer based on multiple single-byte codebooks.</p>
+         <a href="https://github.com/k2-fsa/multi_quantization">Code</a>
        </div>
      </div>
     </div>
@@ -292,8 +319,9 @@
     <div class="card">
        <div class="card-body">
          <h5 class="card-title">kaldifst</h5>
-         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-         <a href="#!" >Button</a>
+         <p class="card-text">Python wrapper for OpenFST and its extensions from Kaldi. Also support reading/writing ark/scp files.</p>
+         <a href="https://github.com/k2-fsa/kaldifst">Code</a>
+         <a href="https://k2-fsa.github.io/kaldifst/">Docs</a>
        </div>
      </div>
   </div>
