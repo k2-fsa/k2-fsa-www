@@ -32,15 +32,19 @@ theme:
     - search.share
     - search.suggest
     - toc.follow
+
   palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
+    scheme: k2
+
   font:
     text: Roboto
     code: Roboto Mono
+
   favicon: assets/k2.png
   logo: assets/k2.png
+
+extra_css:
+  - stylesheets/extra.css
 
 # Page tree
 nav:
