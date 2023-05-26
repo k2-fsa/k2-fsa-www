@@ -68,7 +68,7 @@ nav:
     - icefall: docs/icefall.md
     - sherpa: docs/sherpa.md
     - sherpa-ncnn: docs/sherpa-ncnn.md
-    - sherpa-onnx: docs/sherpa-onnx.mc
+    - sherpa-onnx: docs/sherpa-onnx.md
   - Demo: demo.md
   - Models: models.md
   

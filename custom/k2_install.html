@@ -8,19 +8,49 @@
     }
   </style>
 <!-- MDB -->
-<link href="assets/stylesheets/mdb.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.css"/>
 {% endblock %}
-
 
 {% block content %}
   {{ super() }}
+  <!-- <main class="mdb-docs-layout"> -->
+    <div class="container" id="app">
+      <div class="btn-group">
+        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked />
+        <label class="btn btn-secondary" for="option1">Checked</label>
+      
+        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" />
+        <label class="btn btn-secondary" for="option2">Radio</label>
+      
+        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" />
+        <label class="btn btn-secondary" for="option3">Radio</label>
+      </div>
+    </div>
+  <!-- </main> -->
 
 {% endblock %}
 
 {% block scripts %}
-  <!-- MDB -->
-  <script type="text/javascript" src="assets/javascripts/mdb.min.js"></script>
-
   {{ super() }}
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <!-- MDB -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.js"></script>
+  <script>
+    const { createApp } = Vue
 
+    createApp({
+      data() {
+        return {
+          message: 'Hello Vue!',
+          count: 1,
+        }
+      },
+      methods: {
+        increment() {
+          this.count++
+        }
+      },
+    }).mount('#app')
+  </script>
 {% endblock %}
