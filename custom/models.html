@@ -1,0 +1,162 @@
+{% extends "main.html" %}
+
+{% block styles %}
+{{ super() }}
+  <style>
+    a {
+      color: inherit !important;
+    }
+    .matrix-k2-item-select {
+      background-color: #005dc1 !important;
+      color: white !important;
+    }
+    .matrix-k2-item {
+      background-color: hsl(211, 150%, 95%);
+      text-align: center;
+      margin: 0px 2px;
+      border-radius: 0px;
+    }
+    .matrix-k2-head {
+      font-size: 18px;
+    }
+  </style>
+<!-- MDB -->
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" /> -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.css"/> -->
+<link rel="stylesheet" href="/assets/stylesheets/mdb.min.css"/>
+{% endblock %}
+
+{% block content %}
+  {{ super() }}
+  <!-- <main class="mdb-docs-layout"> -->
+    <div class="container" id="app">
+
+      <div class="row">
+        <div class="col-2 p-2 matrix-k2-head">
+          Streaming
+        </div>
+        <div class="col-10">
+          <div class="d-flex">
+            <div 
+              v-for="(item, index) in k2_build_list"
+              @click="update_k2_build(item)"
+              class="p-2 flex-fill matrix-k2-item"
+              :class="{ 'matrix-k2-item-select': k2_build==item }">[[ item ]]</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-2 p-2 matrix-k2-head">
+          Type
+        </div>
+        <div class="col-10">
+          <div class="d-flex">
+            <div 
+              v-for="(item, index) in os_list"
+              @click="update_os(item)"
+              class="p-2 flex-fill matrix-k2-item"
+              :class="{ 'matrix-k2-item-select': os==item }">[[ item ]]</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-2 p-2 matrix-k2-head">
+          Encoder
+        </div>
+        <div class="col-10">
+          <div class="d-flex">
+            <div 
+              v-for="(item, index) in source_list"
+              @click="update_source(item)"
+              class="p-2 flex-fill matrix-k2-item"
+              :class="{ 'matrix-k2-item-select': source==item }">[[ item ]]</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-2 p-2 matrix-k2-head">
+          Engine
+        </div>
+        <div class="col-10">
+          <div class="d-flex">
+            <div 
+              v-for="(item, index) in pytorch_list"
+              @click="update_pytorch(item)"
+              class="p-2 flex-fill matrix-k2-item"
+              :class="{ 'matrix-k2-item-select': pytorch==item }">[[ item ]]</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-2 p-2 matrix-k2-head">
+          Command:
+        </div>
+        <div class="col-10">
+            <div class="p-2 matrix-k2-item">[[ download ]]</div>
+        </div>
+      </div>
+
+    </div>
+  <!-- </main> -->
+
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+  <!-- MDB -->
+  <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.js"></script> -->
+  <script src="/assets/javascripts/mdb.min.js"></script>
+  <script src="/assets/javascripts/vue.global.js"></script>
+  <script>
+    const { createApp } = Vue
+
+    createApp({
+      delimiters: ["[[", "]]"],
+      data() {
+        return {
+          k2_build: '',
+          os: '',
+          source: '',
+          pytorch: '10.1',
+          cuda: '1.7.1',
+          download: '',
+          k2_build_list: ['1.24.1', '1.23.2'],
+          os_list: ['Linux', 'Mac', 'Windows'],
+          source_list: ['Conda', 'Pip'],
+          pytorch_list: ['1.7.1', '1.8.1', '1.9.1', '1.10.1'],
+          cuda_list: ['10.1', '10.2', '10.3', 'cpu'],
+        }
+      },
+      methods: {
+        update_k2_build(item) {
+          this.k2_build = item;
+          this.update_download();
+        },
+        update_pytorch(item){
+          this.pytorch = item;
+          this.update_download();
+        },
+        update_os(item) {
+          this.os = item;
+          this.update_download();
+        },
+        update_source(item) {
+          this.source = item;
+          this.update_download();
+        },
+        update_cuda(item){
+          this.cuda = item;
+          this.update_download();
+        },
+        update_download () {
+          this.download = this.k2_build + this.os + this.source + this.cuda + this.pytorch;
+        },
+      },
+    }).mount('#app')
+  </script>
+{% endblock %}
