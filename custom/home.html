@@ -9,8 +9,7 @@
   </style>
 <!-- MDB -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.css"/>
-<link href="assets/stylesheets/mdb.min.css" rel="stylesheet">
-<!-- <link href="assets/fontawesome/css/ass.min.css" ref="stylesheet"> -->
+<!-- <link href="assets/stylesheets/mdb.min.css" rel="stylesheet"> -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 {% endblock %}
 
@@ -75,14 +74,13 @@
       font-size: 0.75rem;
       font-weight: 0.75;
     }
-    .card-img-top {
-      width: 60%;
-      padding: 10px 10px 0px 10px;
-    }
     .card {
-      align-items: center;
-      background-color: transparent;
-      box-shadow: none;
+      width: calc(33.33% - 24px);
+    }
+    @media screen and (max-width:768px){
+      .card {
+        width: 100%;
+      }
     }
 
     .card-body a:link {
@@ -104,6 +102,14 @@
       color: #005dc1 !important;
       background-color: transparent;
       text-decoration: underline;
+    }
+    .card-body img {
+      width: 45px;
+      margin: 15px 15px 15px 0px;
+    }
+
+    .card-title {
+      margin: 20px 0px;
     }
   </style>
 
@@ -137,11 +143,11 @@
             </li>
           </ol>
 
-          <a class="btn btn-lg bg-theme text-white me-3" href="/getting-started/" role="button">Get
+          <a class="btn btn-lg bg-theme text-white me-3" href="getting-started" role="button">Get
             started</a>
 
           <a class="btn btn-secondary-theme btn-lg me-3" data-mdb-smooth-scroll="smooth-scroll" data-mdb-offset="25"
-            data-mdb-ripple-color="hsl(265, 81.4%, 53.5%)" href="/demo/" role="button">Demo</a>
+            data-mdb-ripple-color="hsl(265, 81.4%, 53.5%)" href="demo" role="button">Demo</a>
         </div>
       </div>
     </div>
@@ -225,100 +231,125 @@
           Projects
         </h1>
     </div>
-    <div class="d-flex flex-row">
-    <div class="p-1 flex-fill">
+    <div class="d-flex flex-row flex-wrap" style="gap: 36px;">
     <div class="card">
-       <img src="assets/pic/k2_logo.png" class="card-img-top"/>
        <div class="card-body">
-         <h5 class="card-title">k2</h5>
+         <div class="d-flex flex-row">
+           <div> 
+               <img src="assets/pic/k2_logo.png"/>
+           </div>
+           <h5 class="card-title"> k2 </h5>
+         </div>
          <p class="card-text">FSA/FST algorithms, differentiable, with PyTorch compatibility.</p>
          <a href="https://github.com/k2-fsa/k2">Code</a>
          <a href="https://k2-fsa.github.io/k2/">Docs</a>
        </div>
      </div>
-    </div>
 
-    <div class="p-1 flex-fill">
     <div class="card">
-       <img src="assets/pic/icefall_logo.png" class="card-img-top"/>
        <div class="card-body">
-         <h5 class="card-title">icefall</h5>
+         <div class="d-flex flex-row">
+           <div> 
+               <img src="assets/pic/icefall_logo.png"/>
+           </div>
+           <h5 class="card-title"> icefall </h5>
+         </div>
          <p class="card-text">Various of recipes built based on k2, lhotse and pytorch.</p>
          <a href="https://github.com/k2-fsa/icefall">Code</a>
          <a href="https://k2-fsa.github.io/icefall/">Docs</a>
        </div>
      </div>
-    </div>
 
-    <div class="p-1 flex-fill">
     <div class="card">
-       <img src="assets/pic/lhotse_logo.png" class="card-img-top"/>
        <div class="card-body">
-         <h5 class="card-title">lhotse</h5>
+         <div class="d-flex flex-row">
+           <div> 
+               <img src="assets/pic/lhotse_logo.png"/>
+           </div>
+           <h5 class="card-title"> lhotse </h5>
+         </div>
          <p class="card-text">Tools for handling speech data in machine learning projects.</p>
          <a href="https://github.com/lhotse-speech/lhotse">Code</a>
          <a href="https://lhotse.readthedocs.io/en/latest/">Docs</a>
        </div>
      </div>
-    </div>
 
-    <div class="p-1 flex-fill">
     <div class="card">
-       <img src="assets/pic/kaldi_logo.png" class="card-img-top"/>
        <div class="card-body">
-         <h5 class="card-title">sherpa</h5>
+         <div class="d-flex flex-row">
+           <div> 
+               <img src="assets/pic/kaldi_logo.png"/>
+           </div>
+           <h5 class="card-title"> sherpa </h5>
+         </div>
          <p class="card-text">Speech-to-text server framework with next-gen Kaldi</p>
-         <a href="https://github.com/k2-fsa/sherpa">Pytorch</a>
-         <a href="https://github.com/k2-fsa/sherpa-onnx">ONNX</a>
-         <a href="https://github.com/k2-fsa/sherpa-ncnn">NCNN</a>
+         <a href="https://github.com/k2-fsa/sherpa">Code</a>
          <a href="https://k2-fsa.github.io/sherpa/">Docs</a>
        </div>
-     </div>
+    </div>
+
+    <div class="card">
+       <div class="card-body">
+         <div class="d-flex flex-row">
+           <div> 
+               <img src="assets/pic/kaldi_logo.png"/>
+           </div>
+           <h5 class="card-title"> sherpa-onnx </h5>
+         </div>
+         <p class="card-text">Speech-to-text server framework with next-gen Kaldi</p>
+         <a href="https://github.com/k2-fsa/sherpa-onnx">Code</a>
+         <a href="https://k2-fsa.github.io/sherpa/onnx/">Docs</a>
+       </div>
+    </div>
+
+    <div class="card">
+       <div class="card-body">
+         <div class="d-flex flex-row">
+           <div> 
+               <img src="assets/pic/kaldi_logo.png"/>
+           </div>
+           <h5 class="card-title"> sherpa-ncnn </h5>
+         </div>
+         <p class="card-text">Speech-to-text server framework with next-gen Kaldi</p>
+         <a href="https://github.com/k2-fsa/sherpa-ncnn">Code</a>
+         <a href="https://k2-fsa.github.io/sherpa/ncnn/">Docs</a>
+       </div>
     </div>
   </div>
 
-  <div class="d-flex flex-row" style="padding-top: 30px">
-    <div class="p-1 flex-fill">
+  <div class="d-flex flex-row flex-wrap" style="padding-top: 30px; gap: 36px;">
     <div class="card">
        <div class="card-body">
          <h5 class="card-title">fast rnnt</h5>
          <p class="card-text">A torch implementation of a recursion which turns out to be useful for RNN-T.</p>
          <a href="https://github.com/danpovey/fast_rnnt">Code</a>
        </div>
-     </div>
     </div>
 
-    <div class="p-1 flex-fill">
     <div class="card">
        <div class="card-body">
          <h5 class="card-title">text search</h5>
          <p class="card-text">Some fast-ish algorithms for batch text search in moderate-sized collections, intended for data cleanup.</p>
          <a href="https://github.com/k2-fsa/text_search">Code</a>
        </div>
-     </div>
     </div>
 
-    <div class="p-1 flex-fill">
     <div class="card">
        <div class="card-body">
          <h5 class="card-title">divide lm</h5>
          <p class="card-text">Divide a higher order language model with a lower order language model.</p>
          <a href="https://github.com/k2-fsa/devide_lm">Code</a>
        </div>
-     </div>
     </div>
 
-    <div class="p-1 flex-fill">
     <div class="card">
        <div class="card-body">
          <h5 class="card-title">multi-quantization</h5>
          <p class="card-text">Implements a utility for use with PyTorch, for training an efficient quantizer based on multiple single-byte codebooks.</p>
          <a href="https://github.com/k2-fsa/multi_quantization">Code</a>
        </div>
-     </div>
     </div>
 
-    <div class="p-1 flex-fill">
     <div class="card">
        <div class="card-body">
          <h5 class="card-title">kaldifst</h5>
@@ -326,7 +357,6 @@
          <a href="https://github.com/k2-fsa/kaldifst">Code</a>
          <a href="https://k2-fsa.github.io/kaldifst/">Docs</a>
        </div>
-     </div>
   </div>
   </div>
 </section>

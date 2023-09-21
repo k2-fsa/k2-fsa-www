@@ -1,6 +1,6 @@
 # Project information
 site_name: Next-gen Kaldi
-site_url: https://k2-fsa.org
+site_url: https://kingway.fun/k2/
 site_author: Next-gen Kaldi team
 site_description: >-
   Next-gen Kaldi
@@ -61,18 +61,8 @@ nav:
     - Tutorials: tutorials/index.md
     - Train a model: tutorials/train.md
     - Deploy: tutorials/deploy.md
-    - Build an Android demo: tutorials/android.md
-  - Docs:
-    - k2: docs/k2.md
-    - lhotse: docs/lhotse.md
-    - icefall: docs/icefall.md
-    - sherpa: docs/sherpa.md
-    - sherpa-ncnn: docs/sherpa-ncnn.md
-    - sherpa-onnx: docs/sherpa-onnx.md
   - Demo: demo.md
-  - Models: models.md
-  
-
+    #  - Models: models.md
 
 # Extensions
 markdown_extensions:
