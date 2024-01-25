@@ -1,6 +1,6 @@
 # Project information
 site_name: Next-gen Kaldi
-site_url: https://kingway.fun/k2/
+site_url: https://k2-fsa.org
 site_author: Next-gen Kaldi team
 site_description: >-
   Next-gen Kaldi
@@ -10,7 +10,7 @@ repo_name: https://github.com/k2-fsa
 repo_url: https://github.com/k2-fsa
 
 # Copyright
-copyright: Copyright &copy; 2019 - 2023 Next-gen Kaldi team
+copyright: Copyright &copy; 2019 - 2024 Next-gen Kaldi team
 
 theme:
   name: material
@@ -43,26 +43,31 @@ theme:
   favicon: assets/k2.png
   logo: assets/k2.png
 
+plugins:
+  - blog
+
 extra_css:
   - stylesheets/extra.css
 
-# Page tree
 nav:
   - Home: index.md
-  - Getting started: getting-started.md
-  - Installation:
-    - k2: installation/k2.md
-    - icefall: installation/icefall.md
-    - lhotse: installation/lhotse.md
-    - sherpa: installation/sherpa.md
-    - sherpa-ncnn: installation/sherpa-ncnn.md
-    - sherpa-onnx: installation/sherpa-onnx.md
+  - Get started:
+    - Get started: get-started/index.md
+    - k2: get-started/k2.md
+    - icefall: get-started/icefall.md
+    - lhotse: get-started/lhotse.md
+    - sherpa: get-started/sherpa.md
+    - sherpa-ncnn: get-started/sherpa-ncnn.md
+    - sherpa-onnx: get-started/sherpa-onnx.md
   - Tutorials:
     - Tutorials: tutorials/index.md
     - Train a model: tutorials/train.md
     - Deploy: tutorials/deploy.md
-  - Demo: demo.md
-    #  - Models: models.md
+  - Models: models.md
+  - Demos: demos.md
+  - Events: events.md
+  - Blog:
+    - blog/index.md
 
 # Extensions
 markdown_extensions:
@@ -81,8 +86,8 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
