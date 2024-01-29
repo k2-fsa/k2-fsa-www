@@ -1,22 +1,25 @@
 # Project information
-site_name: Next-gen Kaldi
-site_url: https://k2-fsa.org
-docs_dir: 'docs'
-site_dir: 'site' 
-site_author: Next-gen Kaldi team
+site_name: 新一代 Kaldi
+site_url: https://k2-fsa.org/zh-CN
+docs_dir: 'docs-zh-CN'
+site_dir: 'site/zh-CN' 
+site_author: 新一代 Kaldi 团队
 site_description: >-
-  Next-gen Kaldi
+  新一代 Kaldi
 
 # Repository
 repo_name: https://github.com/k2-fsa
 repo_url: https://github.com/k2-fsa
 
 # Copyright
-copyright: Copyright &copy; 2019 - 2024 Next-gen Kaldi team
+copyright: Copyright &copy; 2019 - 2024 新一代 Kaldi 团队
 
 theme:
   name: material
   custom_dir: custom
+  logo: assets/pic/k2.png
+  favicon: assets/pic/k2.png
+  language: zh
   features:
     - announce.dismiss
     - content.code.annotate
@@ -42,34 +45,31 @@ theme:
     text: Roboto
     code: Roboto Mono
 
-  favicon: assets/pic/k2.png
-  logo: assets/pic/k2.png
-
 plugins:
-  - search
   - blog
+  - search
 
 extra_css:
   - assets/stylesheets/extra.css
 
 nav:
-  - Home: index.md
-  - Get started:
-    - Get started: get-started/index.md
+  - 主页: index.md
+  - 从这开始:
+    - get-started/index.md
     - k2: get-started/k2.md
     - icefall: get-started/icefall.md
     - lhotse: get-started/lhotse.md
     - sherpa: get-started/sherpa.md
     - sherpa-ncnn: get-started/sherpa-ncnn.md
     - sherpa-onnx: get-started/sherpa-onnx.md
-  - Tutorials:
+  - 教程:
     - Tutorials: tutorials/index.md
     - Train a model: tutorials/train.md
     - Deploy: tutorials/deploy.md
-  - Models: models.md
-  - Demos: demos.md
-  - Events: events.md
-  - Blog:
+  - 模型: models.md
+  - 演示: demos.md
+  - 事件: events.md
+  - 文章:
     - blog/index.md
 
 # Extensions
