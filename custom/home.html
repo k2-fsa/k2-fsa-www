@@ -120,34 +120,79 @@
     <div class="col-md-6 mb-4 mb-md-0 d-flex align-items-center">
       <div>
         <h1 class="fw-bold h3">
-          Next-gen Kaldi <br>
-          <small class="text-theme h4">for advanced &amp; efficient automatic speech recognition</small>
+          {% if config.theme.language == 'en' %}
+          Next-gen Kaldi
+          {% else %}
+          新一代 Kaldi
+          {% endif %}
+          <br>
+          <small class="text-theme h4">
+            {% if config.theme.language == 'en' %}
+            for advanced &amp; efficient automatic speech recognition
+            {% else %}
+            极致性能 &amp; 运行高效的自动语音识别
+            {% endif %}
+          </small>
         </h1>
         <p class="text-muted">
+          {% if config.theme.language == 'en' %}
           A collection of automatic recognition toolkits consisting of data preparation, sequence modeling, training, decoding, deploying.
+          {% else %}
+          包含语音数据处理、序列建模、模型训练、推理以及部署等的一整套智能语音技术研发工具集
+          {% endif %}
         </p>
         <div class="">
           <ol class="list-unstyled my-5 text-muted">
             <li class="mb-3">
-              <i class="fas fa-check text-theme me-2"></i> Fast training with <strong>pruned rnnt loss</strong>
+              <i class="fas fa-check text-theme me-2"></i>
+              {% if config.theme.language == 'en' %}
+              Fast training with <strong>pruned rnnt loss</strong>
+              {% else %}
+              使用 <strong>pruned rnnt loss</strong> 进行快速训练
+              {% endif %}
             </li>
             <li class="mb-3">
-              <i class="fas fa-check text-theme me-2"></i> Advanced <strong>zipformer</strong> for modeling
+              <i class="fas fa-check text-theme me-2"></i>
+              {% if config.theme.language == 'en' %}
+              Advanced <strong>zipformer</strong> for modeling
+              {% else %}
+              使用先进的 <strong>zipformer</strong> 建模
+              {% endif %}
             </li>
             <li class="mb-3">
-              <i class="fas fa-check text-theme me-2"></i> Easy to use, supporting many platforms
+              <i class="fas fa-check text-theme me-2"></i>
+              {% if config.theme.language == 'en' %}
+              Easy to use, supporting many platforms
+              {% else %}
+              简单易用， 支持在各大主流平台部署
+              {% endif %} 
             </li>
             <li class="">
-              <i class="fas fa-check text-theme me-2"></i> Apache-2.0 license -
-              free for personal &amp; commercial use
+              <i class="fas fa-check text-theme me-2"></i>
+              {% if config.theme.language == 'en' %}
+              Apache-2.0 license - free for personal &amp; commercial use
+              {% else %}
+              使用 Apache-2.0 开源协议 - 对商业应用非常友好
+              {% endif %}
             </li>
           </ol>
 
-          <a class="btn btn-lg bg-theme text-white me-3" href="getting-started" role="button">Get
-            started</a>
+          <a class="btn btn-lg bg-theme text-white me-3" href="get-started" role="button">
+            {% if config.theme.language == 'en' %}
+            Get started
+            {% else %}
+            从这开始
+            {% endif %}
+          </a>
 
           <a class="btn btn-secondary-theme btn-lg me-3" data-mdb-smooth-scroll="smooth-scroll" data-mdb-offset="25"
-            data-mdb-ripple-color="hsl(265, 81.4%, 53.5%)" href="demo" role="button">Demo</a>
+            data-mdb-ripple-color="hsl(265, 81.4%, 53.5%)" href="demos" role="button">
+            {% if config.theme.language == 'en' %}
+            Demo
+            {% else %}
+            演示
+            {% endif %}
+          </a>
         </div>
       </div>
     </div>
@@ -186,7 +231,13 @@
             <img src="assets/pic/k2.jpg" class="d-block w-100" alt="k2"/>
             <div class="carousel-caption d-none d-md-block">
               <h5></h5>
-              <p>Core algorithms</p>
+              <p>
+                {% if config.theme.language == 'en' %}
+                Core algorithms
+                {% else %}
+                核心算法
+                {% endif %}
+              </p>
             </div>
           </div>
       
@@ -195,7 +246,13 @@
             <img src="assets/pic/lhotse.jpg" class="d-block w-100" alt="lhotse"/>
             <div class="carousel-caption d-none d-md-block">
               <h5></h5>
-              <p>Data preparation toolkit</p>
+              <p>
+                {% if config.theme.language == 'en' %}
+                Data preparation toolkit
+                {% else %}
+                数据准备工具
+                {% endif %}
+              </p>
             </div>
           </div>
       
@@ -204,7 +261,13 @@
             <img src="assets/pic/icefall.jpg" class="d-block w-100" alt="icefall"/>
             <div class="carousel-caption d-none d-md-block">
               <h5></h5>
-              <p>Recipes</p>
+              <p>
+                {% if config.theme.language == 'en' %}
+                Recipes
+                {% else %}
+                示例脚本
+                {% endif %}
+              </p>
             </div>
           </div>
         </div>
@@ -213,11 +276,23 @@
         <!-- Controls -->
         <button class="carousel-control-prev" type="button" data-mdb-target="#k2carousel" data-mdb-slide="prev">
           <span class="carousel-control-prev-icon"></span>
-          <span class="visually-hidden">Previous</span>
+          <span class="visually-hidden">
+            {% if config.theme.language == 'en' %}
+            Previous
+            {% else %}
+            上一个
+            {% endif %}
+          </span>
         </button>
         <button class="carousel-control-next" type="button" data-mdb-target="#k2carousel" data-mdb-slide="next">
           <span class="carousel-control-next-icon"></span>
-          <span class="visually-hidden">Next</span>
+          <span class="visually-hidden">
+            {% if config.theme.language == 'en' %}
+            Next
+            {% else %}
+            下一个
+            {% endif %}
+          </span>
         </button>
       </div>
       <!-- Carousel wrapper -->
@@ -228,7 +303,11 @@
 <section class="mt-md-4">
     <div style="padding: 0px 0px 20px 0px">
         <h1 class="fw-bold h3">
+          {% if config.theme.language == 'en' %}
           Projects
+          {% else %}
+          项目
+          {% endif %}
         </h1>
     </div>
     <div class="d-flex flex-row flex-wrap" style="gap: 36px;">
@@ -240,7 +319,9 @@
            </div>
            <h5 class="card-title"> k2 </h5>
          </div>
-         <p class="card-text">FSA/FST algorithms, differentiable, with PyTorch compatibility.</p>
+         <p class="card-text">
+          FSA/FST algorithms, differentiable, with PyTorch compatibility.
+        </p>
          <a href="https://github.com/k2-fsa/k2">Code</a>
          <a href="https://k2-fsa.github.io/k2/">Docs</a>
        </div>
@@ -254,9 +335,15 @@
            </div>
            <h5 class="card-title"> icefall </h5>
          </div>
-         <p class="card-text">Various of recipes built based on k2, lhotse and pytorch.</p>
-         <a href="https://github.com/k2-fsa/icefall">Code</a>
-         <a href="https://k2-fsa.github.io/icefall/">Docs</a>
+         <p class="card-text">
+          Various of recipes built based on k2, lhotse and pytorch.
+        </p>
+         <a href="https://github.com/k2-fsa/icefall">
+          Code
+        </a>
+         <a href="https://k2-fsa.github.io/icefall/">
+          Docs
+        </a>
        </div>
      </div>
 
@@ -268,9 +355,15 @@
            </div>
            <h5 class="card-title"> lhotse </h5>
          </div>
-         <p class="card-text">Tools for handling speech data in machine learning projects.</p>
-         <a href="https://github.com/lhotse-speech/lhotse">Code</a>
-         <a href="https://lhotse.readthedocs.io/en/latest/">Docs</a>
+         <p class="card-text">
+          Tools for handling speech data in machine learning projects.
+        </p>
+         <a href="https://github.com/lhotse-speech/lhotse">
+          Code
+        </a>
+         <a href="https://lhotse.readthedocs.io/en/latest/">
+          Docs
+        </a>
        </div>
      </div>
 
@@ -278,13 +371,19 @@
        <div class="card-body">
          <div class="d-flex flex-row">
            <div> 
-               <img src="assets/pic/kaldi_logo.png"/>
+               <img src="assets/pic/sherpa-logo.png"/>
            </div>
            <h5 class="card-title"> sherpa </h5>
          </div>
-         <p class="card-text">Speech-to-text server framework with next-gen Kaldi</p>
-         <a href="https://github.com/k2-fsa/sherpa">Code</a>
-         <a href="https://k2-fsa.github.io/sherpa/">Docs</a>
+         <p class="card-text">
+          Speech-to-text server framework with next-gen Kaldi
+        </p>
+         <a href="https://github.com/k2-fsa/sherpa">
+          Code
+        </a>
+         <a href="https://k2-fsa.github.io/sherpa/">
+          Doc
+        </a>
        </div>
     </div>
 
@@ -292,13 +391,19 @@
        <div class="card-body">
          <div class="d-flex flex-row">
            <div> 
-               <img src="assets/pic/kaldi_logo.png"/>
+               <img src="assets/pic/sherpa-logo.png"/>
            </div>
            <h5 class="card-title"> sherpa-onnx </h5>
          </div>
-         <p class="card-text">Speech-to-text server framework with next-gen Kaldi</p>
-         <a href="https://github.com/k2-fsa/sherpa-onnx">Code</a>
-         <a href="https://k2-fsa.github.io/sherpa/onnx/">Docs</a>
+         <p class="card-text">
+          Speech-to-text server framework with next-gen Kaldi
+        </p>
+         <a href="https://github.com/k2-fsa/sherpa-onnx">
+          Code
+        </a>
+         <a href="https://k2-fsa.github.io/sherpa/onnx/">
+          Docs
+        </a>
        </div>
     </div>
 
@@ -306,13 +411,19 @@
        <div class="card-body">
          <div class="d-flex flex-row">
            <div> 
-               <img src="assets/pic/kaldi_logo.png"/>
+               <img src="assets/pic/sherpa-logo.png"/>
            </div>
            <h5 class="card-title"> sherpa-ncnn </h5>
          </div>
-         <p class="card-text">Speech-to-text server framework with next-gen Kaldi</p>
-         <a href="https://github.com/k2-fsa/sherpa-ncnn">Code</a>
-         <a href="https://k2-fsa.github.io/sherpa/ncnn/">Docs</a>
+         <p class="card-text">
+          Speech-to-text server framework with next-gen Kaldi
+        </p>
+         <a href="https://github.com/k2-fsa/sherpa-ncnn">
+          Code
+        </a>
+         <a href="https://k2-fsa.github.io/sherpa/ncnn/">
+          Docs
+        </a>
        </div>
     </div>
   </div>
@@ -321,42 +432,86 @@
     <div class="card">
        <div class="card-body">
          <h5 class="card-title">fast rnnt</h5>
-         <p class="card-text">A torch implementation of a recursion which turns out to be useful for RNN-T.</p>
-         <a href="https://github.com/danpovey/fast_rnnt">Code</a>
+         <p class="card-text">
+          A torch implementation of a recursion which turns out to be useful for RNN-T.
+        </p>
+         <a href="https://github.com/danpovey/fast_rnnt">
+          Code
+        </a>
        </div>
     </div>
 
     <div class="card">
        <div class="card-body">
          <h5 class="card-title">text search</h5>
-         <p class="card-text">Some fast-ish algorithms for batch text search in moderate-sized collections, intended for data cleanup.</p>
-         <a href="https://github.com/k2-fsa/text_search">Code</a>
+         <p class="card-text">
+          Some fast-ish algorithms for batch text search in moderate-sized collections, intended for data cleanup.
+        </p>
+         <a href="https://github.com/k2-fsa/text_search">
+          Code
+        </a>
        </div>
     </div>
 
     <div class="card">
        <div class="card-body">
          <h5 class="card-title">divide lm</h5>
-         <p class="card-text">Divide a higher order language model with a lower order language model.</p>
-         <a href="https://github.com/k2-fsa/devide_lm">Code</a>
+         <p class="card-text">
+          Divide a higher order language model with a lower order language model.
+        </p>
+         <a href="https://github.com/k2-fsa/devide_lm">
+          Code
+        </a>
        </div>
     </div>
 
     <div class="card">
        <div class="card-body">
          <h5 class="card-title">multi-quantization</h5>
-         <p class="card-text">Implements a utility for use with PyTorch, for training an efficient quantizer based on multiple single-byte codebooks.</p>
-         <a href="https://github.com/k2-fsa/multi_quantization">Code</a>
+         <p class="card-text">
+          Implements a utility for use with PyTorch, for training an efficient quantizer based on multiple single-byte codebooks.
+        </p>
+         <a href="https://github.com/k2-fsa/multi_quantization">
+          Code
+        </a>
        </div>
     </div>
 
     <div class="card">
        <div class="card-body">
          <h5 class="card-title">kaldifst</h5>
-         <p class="card-text">Python wrapper for OpenFST and its extensions from Kaldi. Also support reading/writing ark/scp files.</p>
-         <a href="https://github.com/k2-fsa/kaldifst">Code</a>
-         <a href="https://k2-fsa.github.io/kaldifst/">Docs</a>
+         <p class="card-text">
+          Python wrapper for OpenFST and its extensions from Kaldi. Also support reading/writing ark/scp files.
+        </p>
+         <a href="https://github.com/k2-fsa/kaldifst">
+          Code
+        </a>
+         <a href="https://k2-fsa.github.io/kaldifst/">
+          Docs
+        </a>
        </div>
+  </div>
+  <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">kaldi-decoder</h5>
+        <p class="card-text">
+          Decoders from Kaldi using OpenFst.
+      </p>
+        <a href="https://github.com/k2-fsa/kaldi-decoder">
+        Code
+      </a>
+      </div>
+  </div>
+  <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Libriheavy</h5>
+        <p class="card-text">
+          Libriheavy: a 50,000 hours ASR corpus with punctuation casing and context.
+      </p>
+        <a href="https://github.com/k2-fsa/libriheavy">
+        Code
+      </a>
+      </div>
   </div>
   </div>
 </section>
