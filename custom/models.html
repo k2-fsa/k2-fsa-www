@@ -187,6 +187,19 @@
         </div>
       </div>
 
+      <div class="row">
+        <div class="col-2 p-2 matrix-k2-head">
+          {% if config.theme.language == 'en' %}
+          Description
+          {% else %}
+          模型简介
+          {% endif %}
+        </div>
+        <div class="col-10">
+            <div class="p-2 matrix-k2-install">[[ description ]]</div>
+        </div>
+      </div>
+
     </div>
   <!-- </main> -->
   {{ super() }}
@@ -213,6 +226,7 @@
           type: '',
           download: '',
           uage: '',
+          description: '',
           version: '',
           show_version: false,
           language_list: [],
@@ -313,6 +327,7 @@
             this.show_version = false;
             this.download = this.sources[this.version_indexes[0]].download;
             this.usage = this.sources[this.version_indexes[0]].usage;
+            this.description = this.sources[this.version_indexes[0]].description;
           } else {
             this.show_version = true;
             this.version_list = version_list;
@@ -323,6 +338,7 @@
           this.version = item;
           this.download = this.sources[this.version_indexes[item]].download;
           this.usage = this.sources[this.version_indexes[item]].usage;
+          this.description = this.sources[this.version_indexes[item]].description;
         }
       },
     }).mount('#app')
