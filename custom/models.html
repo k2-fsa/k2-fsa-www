@@ -159,7 +159,19 @@
           </div>
         </div>
       </div>
-      
+
+      <div class="row">
+        <div class="col-2 p-2 matrix-k2-head">
+          {% if config.theme.language == 'en' %}
+          Description
+          {% else %}
+          模型简介
+          {% endif %}
+        </div>
+        <div class="col-10">
+            <div class="p-2 matrix-k2-install">[[ description ]]</div>
+        </div>
+      </div>
 
       <div class="row">
         <div class="col-2 p-2 matrix-k2-head">
@@ -184,19 +196,6 @@
         </div>
         <div class="col-10">
             <div class="p-2 matrix-k2-install">[[ usage ]]</div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-2 p-2 matrix-k2-head">
-          {% if config.theme.language == 'en' %}
-          Description
-          {% else %}
-          模型简介
-          {% endif %}
-        </div>
-        <div class="col-10">
-            <div class="p-2 matrix-k2-install">[[ description ]]</div>
         </div>
       </div>
 
