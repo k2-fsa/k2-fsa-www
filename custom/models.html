@@ -13,11 +13,21 @@
     .matrix-k2-item {
       background-color: hsl(211, 150%, 95%);
       text-align: center;
-      margin: 0px 2px;
+      margin: 2px 2px;
       border-radius: 0px;
+    }
+    .matrix-k2-install {
+      background-color: hsl(211, 150%, 95%);
+      margin: 2px 2px;
+      border-radius: 0px;
+      font-size: 14px;
+      white-space: pre-line;
     }
     .matrix-k2-head {
       font-size: 18px;
+    }
+    .md-typeset h1 {
+      display:block;
     }
   </style>
 <!-- MDB -->
@@ -27,82 +37,159 @@
 {% endblock %}
 
 {% block content %}
-  {{ super() }}
+   {% if config.theme.language == 'en' %}
+   <h1 id="ASR"> ASR <a class="headerlink" href="#ASR" title="Permanent link">&para;</a></h1>
+   {% else %}
+   <h1 id="语音识别"> 语音识别 <a class="headerlink" href="#语音识别" title="Permanent link">&para;</a></h1>
+   {% endif %}
+  
   <!-- <main class="mdb-docs-layout"> -->
     <div class="container" id="app">
 
       <div class="row">
         <div class="col-2 p-2 matrix-k2-head">
-          Streaming
+          {% if config.theme.language == 'en' %}
+          Language
+          {% else %}
+          语言
+          {% endif %}
         </div>
         <div class="col-10">
           <div class="d-flex">
             <div 
-              v-for="(item, index) in k2_build_list"
-              @click="update_k2_build(item)"
+              v-for="(item, index) in language_list"
+              @click="update_language(item)"
               class="p-2 flex-fill matrix-k2-item"
-              :class="{ 'matrix-k2-item-select': k2_build==item }">[[ item ]]</div>
+              :class="{ 'matrix-k2-item-select': language==item }">[[ item ]]</div>
           </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-2 p-2 matrix-k2-head">
+          {% if config.theme.language == 'en' %}
           Type
+          {% else %}
+          类型
+          {% endif %}
         </div>
         <div class="col-10">
           <div class="d-flex">
             <div 
-              v-for="(item, index) in os_list"
-              @click="update_os(item)"
+              v-for="(item, index) in type_list"
+              @click="update_type(item)"
               class="p-2 flex-fill matrix-k2-item"
-              :class="{ 'matrix-k2-item-select': os==item }">[[ item ]]</div>
+              :class="{ 'matrix-k2-item-select': type==item }">[[ item ]]</div>
           </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-2 p-2 matrix-k2-head">
-          Encoder
-        </div>
-        <div class="col-10">
-          <div class="d-flex">
-            <div 
-              v-for="(item, index) in source_list"
-              @click="update_source(item)"
-              class="p-2 flex-fill matrix-k2-item"
-              :class="{ 'matrix-k2-item-select': source==item }">[[ item ]]</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-2 p-2 matrix-k2-head">
+          {% if config.theme.language == 'en' %}
           Engine
+          {% else %}
+          推理引擎
+          {% endif %}
         </div>
         <div class="col-10">
           <div class="d-flex">
             <div 
-              v-for="(item, index) in pytorch_list"
-              @click="update_pytorch(item)"
+              v-for="(item, index) in engine_list"
+              @click="update_engine(item)"
               class="p-2 flex-fill matrix-k2-item"
-              :class="{ 'matrix-k2-item-select': pytorch==item }">[[ item ]]</div>
+              :class="{ 'matrix-k2-item-select': engine==item }">[[ item ]]</div>
           </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-2 p-2 matrix-k2-head">
-          Command:
+          {% if config.theme.language == 'en' %}
+          Encoder
+          {% else %}
+          声学模型
+          {% endif %}
         </div>
         <div class="col-10">
-            <div class="p-2 matrix-k2-item">[[ download ]]</div>
+          <div class="d-flex">
+            <div 
+              v-for="(item, index) in encoder_list"
+              @click="update_encoder(item)"
+              class="p-2 flex-fill matrix-k2-item"
+              :class="{ 'matrix-k2-item-select': encoder==item }">[[ item ]]</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-2 p-2 matrix-k2-head">
+          {% if config.theme.language == 'en' %}
+          Mode
+          {% else %}
+          模式
+          {% endif %}
+        </div>
+        <div class="col-10">
+          <div class="d-flex">
+            <div 
+              v-for="(item, index) in mode_list"
+              @click="update_mode(item)"
+              class="p-2 flex-fill matrix-k2-item"
+              :class="{ 'matrix-k2-item-select': mode==item }">[[ item ]]</div>
+          </div>
+        </div>
+      </div>
+
+      <div v-if="show_version" class="row">
+        <div class="col-2 p-2 matrix-k2-head">
+          {% if config.theme.language == 'en' %}
+          Version
+          {% else %}
+          版本
+          {% endif %}
+        </div>
+        <div class="col-10">
+          <div class="d-flex">
+            <div 
+              v-for="(item, index) in version_list"
+              @click="update_version(item)"
+              class="p-2 flex-fill matrix-k2-item"
+              :class="{ 'matrix-k2-item-select': version==item }">[[ item ]]</div>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="row">
+        <div class="col-2 p-2 matrix-k2-head">
+          {% if config.theme.language == 'en' %}
+          Download
+          {% else %}
+          下载地址
+          {% endif %}
+        </div>
+        <div class="col-10">
+            <div class="p-2 matrix-k2-install">[[ download ]]</div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-2 p-2 matrix-k2-head">
+          {% if config.theme.language == 'en' %}
+          Usage
+          {% else %}
+          使用方法
+          {% endif %}
+        </div>
+        <div class="col-10">
+            <div class="p-2 matrix-k2-install">[[ usage ]]</div>
         </div>
       </div>
 
     </div>
   <!-- </main> -->
-
+  {{ super() }}
 {% endblock %}
 
 {% block scripts %}
@@ -119,43 +206,124 @@
       delimiters: ["[[", "]]"],
       data() {
         return {
-          k2_build: '',
-          os: '',
-          source: '',
-          pytorch: '10.1',
-          cuda: '1.7.1',
+          language: '',
+          mode: '',
+          engine: '',
+          encoder: '',
+          type: '',
           download: '',
-          k2_build_list: ['1.24.1', '1.23.2'],
-          os_list: ['Linux', 'Mac', 'Windows'],
-          source_list: ['Conda', 'Pip'],
-          pytorch_list: ['1.7.1', '1.8.1', '1.9.1', '1.10.1'],
-          cuda_list: ['10.1', '10.2', '10.3', 'cpu'],
+          uage: '',
+          version: '',
+          show_version: false,
+          language_list: [],
+          language_indexes : [],
+          mode_list: [],
+          mode_indexes : [],
+          engine_list: [],
+          engine_indexes: [],
+          encoder_list: [],
+          encoder_indexes: [],
+          type_list: [],
+          type_indexes: [],
+          version_list: [],
+          sources : [],
         }
       },
+      mounted() {
+        let that = this;
+        var path = '';
+        if (document.documentElement.lang == "en") {
+          path = "/assets/data/asr_model_en.json";
+        } else {
+          path = "/assets/data/asr_model_cn.json";
+        }
+        window.fetch(path).then(
+          function(response) {
+            return response.json();
+          }).then(function(data) {
+            that.sources = data;
+            that.init();
+          })
+      },
       methods: {
-        update_k2_build(item) {
-          this.k2_build = item;
-          this.update_download();
+        get_item_list(indexes, key) {
+          var item_list = [];
+          for (let i = 0; i < indexes.length; ++i) {
+            let index = indexes[i];
+            let item = this.sources[index];
+            if (item_list.includes(item[key])) {
+              continue;
+            } else {
+              item_list.push(item[key]);
+            }
+          }
+          return item_list;
         },
-        update_pytorch(item){
-          this.pytorch = item;
-          this.update_download();
+        get_index_list(indexes, key, value) {
+          var index_list = [];
+          for (let i = 0; i < indexes.length; ++i) {
+            let index = indexes[i];
+            let item = this.sources[index];
+            if (item[key] == value) {
+              index_list.push(index);
+            }
+          }
+          return index_list;
         },
-        update_os(item) {
-          this.os = item;
-          this.update_download();
+        init() {
+          for (let i = 0; i < this.sources.length; ++i) {
+            this.language_indexes.push(i);
+          }
+          this.language_list = this.get_item_list(this.language_indexes, "language");
+          this.update_language(this.language_list[0])
         },
-        update_source(item) {
-          this.source = item;
-          this.update_download();
+        update_language(item) {
+          this.language = item;
+          this.type_indexes = this.get_index_list(this.language_indexes, "language", item);
+          this.type_list = this.get_item_list(this.type_indexes, "type");
+          this.update_type(this.type_list[0]);
         },
-        update_cuda(item){
-          this.cuda = item;
-          this.update_download();
+        update_type(item) {
+          this.type = item;
+          this.engine_indexes = this.get_index_list(this.type_indexes, "type", item);
+          this.engine_list = this.get_item_list(this.engine_indexes, "engine");
+          this.update_engine(this.engine_list[0]);
         },
-        update_download () {
-          this.download = this.k2_build + this.os + this.source + this.cuda + this.pytorch;
+        update_engine(item) {
+          this.engine = item;
+          this.encoder_indexes = this.get_index_list(this.engine_indexes, "engine", item);
+          this.encoder_list = this.get_item_list(this.encoder_indexes, "encoder");
+          this.update_encoder(this.encoder_list[0]);
         },
+        update_encoder(item) {
+          this.encoder = item;
+          this.mode_indexes = this.get_index_list(this.encoder_indexes, "encoder", item);
+          this.mode_list = this.get_item_list(this.mode_indexes, "mode");
+          this.update_mode(this.mode_list[0]);
+        },
+        update_mode(item){
+          this.mode = item;
+          this.version_indexes = this.get_index_list(this.mode_indexes, "mode", item);
+          version_list = [];
+          for (let i = 0; i < this.version_indexes.length; ++i) {
+            version_list.push(i);
+          }
+          console.log(version_list);
+          if (version_list.length == 1) {
+            this.show_version = false;
+            this.download = this.sources[this.version_indexes[0]].download;
+            this.usage = this.sources[this.version_indexes[0]].usage;
+          } else {
+            this.show_version = true;
+            this.version_list = version_list;
+            this.update_version(this.version_list[0]);
+          }
+        },
+        update_version(item) {
+          this.version = item;
+          this.download = this.sources[this.version_indexes[item]].download;
+          this.usage = this.sources[this.version_indexes[item]].usage;
+        }
       },
     }).mount('#app')
   </script>

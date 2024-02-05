@@ -320,10 +320,26 @@
            <h5 class="card-title"> k2 </h5>
          </div>
          <p class="card-text">
+          {% if config.theme.language == 'en' %}
           FSA/FST algorithms, differentiable, with PyTorch compatibility.
+          {% else %}
+          可微分有限状态自动机; 基于 FSA 的 GPU 解码算法；Pruned RNNT 损失函数等。
+          {% endif %}
         </p>
-         <a href="https://github.com/k2-fsa/k2">Code</a>
-         <a href="https://k2-fsa.github.io/k2/">Docs</a>
+         <a href="https://github.com/k2-fsa/k2">
+          {% if config.theme.language == 'en' %}
+          Code
+          {% else %}
+          代码
+          {% endif %}
+        </a>
+         <a href="https://k2-fsa.github.io/k2/">
+          {% if config.theme.language == 'en' %}
+          Docs
+          {% else %}
+          文档
+          {% endif %}
+        </a>
        </div>
      </div>
 
@@ -336,13 +352,25 @@
            <h5 class="card-title"> icefall </h5>
          </div>
          <p class="card-text">
+          {% if config.theme.language == 'en' %}
           Various of recipes built based on k2, lhotse and pytorch.
+          {% else %}
+          各流行数据集示例脚本集合，zipformer 模型的实现，训练解码代码，模型导出脚本等。
+          {% endif %}
         </p>
          <a href="https://github.com/k2-fsa/icefall">
+          {% if config.theme.language == 'en' %}
           Code
+          {% else %}
+          代码
+          {% endif %}
         </a>
          <a href="https://k2-fsa.github.io/icefall/">
+          {% if config.theme.language == 'en' %}
           Docs
+          {% else %}
+          文档
+          {% endif %}
         </a>
        </div>
      </div>
@@ -356,13 +384,25 @@
            <h5 class="card-title"> lhotse </h5>
          </div>
          <p class="card-text">
+          {% if config.theme.language == 'en' %}
           Tools for handling speech data in machine learning projects.
+          {% else %}
+          语音数据集处理工具，流行数据集下载和预处理脚本，dataloader实现等。
+          {% endif %}
         </p>
          <a href="https://github.com/lhotse-speech/lhotse">
+          {% if config.theme.language == 'en' %}
           Code
+          {% else %}
+          代码
+          {% endif %}
         </a>
          <a href="https://lhotse.readthedocs.io/en/latest/">
+          {% if config.theme.language == 'en' %}
           Docs
+          {% else %}
+          文档
+          {% endif %}
         </a>
        </div>
      </div>
@@ -376,13 +416,25 @@
            <h5 class="card-title"> sherpa </h5>
          </div>
          <p class="card-text">
-          Speech-to-text server framework with next-gen Kaldi
+          {% if config.theme.language == 'en' %}
+          Speech-to-text server framework (based on libtorch) with next-gen Kaldi
+          {% else %}
+          Libtorch 为推理引擎的语音识别服务框架，主要支持服务端高并发，以 Python 接口为主。
+          {% endif %}
         </p>
          <a href="https://github.com/k2-fsa/sherpa">
+          {% if config.theme.language == 'en' %}
           Code
+          {% else %}
+          代码
+          {% endif %}
         </a>
          <a href="https://k2-fsa.github.io/sherpa/">
-          Doc
+          {% if config.theme.language == 'en' %}
+          Docs
+          {% else %}
+          文档
+          {% endif %}
         </a>
        </div>
     </div>
@@ -396,13 +448,25 @@
            <h5 class="card-title"> sherpa-onnx </h5>
          </div>
          <p class="card-text">
-          Speech-to-text server framework with next-gen Kaldi
+          {% if config.theme.language == 'en' %}
+          Speech-to-text server framework (based on onnxruntime) with next-gen Kaldi
+          {% else %}
+          Onnxruntime 为推理引擎的语音服务框架，支持服务器端和设备端，拥有众多编程语言接口，支持语音识别、说话人识别、自定义唤醒词和 TTS 等。
+          {% endif %}
         </p>
          <a href="https://github.com/k2-fsa/sherpa-onnx">
+          {% if config.theme.language == 'en' %}
           Code
+          {% else %}
+          代码
+          {% endif %}
         </a>
          <a href="https://k2-fsa.github.io/sherpa/onnx/">
+          {% if config.theme.language == 'en' %}
           Docs
+          {% else %}
+          文档
+          {% endif %}
         </a>
        </div>
     </div>
@@ -416,13 +480,25 @@
            <h5 class="card-title"> sherpa-ncnn </h5>
          </div>
          <p class="card-text">
-          Speech-to-text server framework with next-gen Kaldi
+          {% if config.theme.language == 'en' %}
+          Speech-to-text server framework (based on ncnn) with next-gen Kaldi
+          {% else %}
+          NCNN 为推理引擎的语音服务框架，主打设备端部署，拥有众多编程语言接口，极低资源需求。
+          {% endif %}
         </p>
          <a href="https://github.com/k2-fsa/sherpa-ncnn">
+          {% if config.theme.language == 'en' %}
           Code
+          {% else %}
+          代码
+          {% endif %}
         </a>
          <a href="https://k2-fsa.github.io/sherpa/ncnn/">
+          {% if config.theme.language == 'en' %}
           Docs
+          {% else %}
+          文档
+          {% endif %}
         </a>
        </div>
     </div>
@@ -433,10 +509,18 @@
        <div class="card-body">
          <h5 class="card-title">fast rnnt</h5>
          <p class="card-text">
+          {% if config.theme.language == 'en' %}
           A torch implementation of a recursion which turns out to be useful for RNN-T.
+          {% else %}
+          Pruned RNNT 的单独仓库，只依赖于 Pytorch，无需安装 k2 也能使用 Pruned RNNT 损失函数。
+          {% endif %}
         </p>
          <a href="https://github.com/danpovey/fast_rnnt">
+          {% if config.theme.language == 'en' %}
           Code
+          {% else %}
+          代码
+          {% endif %}
         </a>
        </div>
     </div>
@@ -445,34 +529,56 @@
        <div class="card-body">
          <h5 class="card-title">text search</h5>
          <p class="card-text">
+          {% if config.theme.language == 'en' %}
           Some fast-ish algorithms for batch text search in moderate-sized collections, intended for data cleanup.
+          {% else %}
+          以有声书资源构建语音识别数据集的完整方案，内含Libriheavy 数据集构建流程。
+          {% endif %}
         </p>
          <a href="https://github.com/k2-fsa/text_search">
+          {% if config.theme.language == 'en' %}
           Code
+          {% else %}
+          代码
+          {% endif %}
         </a>
        </div>
     </div>
-
     <div class="card">
-       <div class="card-body">
-         <h5 class="card-title">divide lm</h5>
-         <p class="card-text">
-          Divide a higher order language model with a lower order language model.
+        <div class="card-body">
+          <h5 class="card-title">Libriheavy</h5>
+          <p class="card-text">
+            {% if config.theme.language == 'en' %}
+            Libriheavy: a 50,000 hours ASR corpus with punctuation casing and context.
+            {% else %}
+            基于有声书的 50000 小时开源英文数据集，标注包含大小写和标点符号以及文本上文。
+            {% endif %}
         </p>
-         <a href="https://github.com/k2-fsa/devide_lm">
-          Code
+          <a href="https://github.com/k2-fsa/libriheavy">
+            {% if config.theme.language == 'en' %}
+            Code
+            {% else %}
+            代码
+            {% endif %}
         </a>
-       </div>
+        </div>
     </div>
-
     <div class="card">
        <div class="card-body">
          <h5 class="card-title">multi-quantization</h5>
          <p class="card-text">
+          {% if config.theme.language == 'en' %}
           Implements a utility for use with PyTorch, for training an efficient quantizer based on multiple single-byte codebooks.
+          {% else %}
+          基于 Pytorch 的多码本量化器的训练脚本。
+          {% endif %}
         </p>
          <a href="https://github.com/k2-fsa/multi_quantization">
+          {% if config.theme.language == 'en' %}
           Code
+          {% else %}
+          代码
+          {% endif %}
         </a>
        </div>
     </div>
@@ -481,13 +587,25 @@
        <div class="card-body">
          <h5 class="card-title">kaldifst</h5>
          <p class="card-text">
+          {% if config.theme.language == 'en' %}
           Python wrapper for OpenFST and its extensions from Kaldi. Also support reading/writing ark/scp files.
+          {% else %}
+          包含 Kaldi 拓展的 OpenFST python 接口，基于 pybind11 构建，不依赖于 Kaldi。
+          {% endif %}
         </p>
          <a href="https://github.com/k2-fsa/kaldifst">
+          {% if config.theme.language == 'en' %}
           Code
+          {% else %}
+          代码
+          {% endif %}
         </a>
          <a href="https://k2-fsa.github.io/kaldifst/">
+          {% if config.theme.language == 'en' %}
           Docs
+          {% else %}
+          文档
+          {% endif %}
         </a>
        </div>
   </div>
@@ -495,21 +613,37 @@
       <div class="card-body">
         <h5 class="card-title">kaldi-decoder</h5>
         <p class="card-text">
+          {% if config.theme.language == 'en' %}
           Decoders from Kaldi using OpenFst.
+          {% else %}
+          基于 OpenFst 的 Kaldi 解码器，安装方便，不依赖于 Kaldi。
+          {% endif %}
       </p>
         <a href="https://github.com/k2-fsa/kaldi-decoder">
-        Code
+          {% if config.theme.language == 'en' %}
+          Code
+          {% else %}
+          代码
+          {% endif %}
       </a>
       </div>
   </div>
   <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Libriheavy</h5>
+        <h5 class="card-title">divide lm</h5>
         <p class="card-text">
-          Libriheavy: a 50,000 hours ASR corpus with punctuation casing and context.
+        {% if config.theme.language == 'en' %}
+        Divide a higher order language model with a lower order language model.
+        {% else %}
+        将两个 ngram 语言模型相减的脚本(高阶减低阶)。
+        {% endif %}
       </p>
-        <a href="https://github.com/k2-fsa/libriheavy">
+        <a href="https://github.com/k2-fsa/devide_lm">
+        {% if config.theme.language == 'en' %}
         Code
+        {% else %}
+        代码
+        {% endif %}
       </a>
       </div>
   </div>

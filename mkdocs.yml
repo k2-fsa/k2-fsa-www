@@ -66,7 +66,10 @@ nav:
     - Tutorials: tutorials/index.md
     - Train a model: tutorials/train.md
     - Deploy: tutorials/deploy.md
-  - Models: models.md
+  - Models:
+    - ASR: models/asr.md
+    - TTS: models/tts.md
+    - KWS: models/kws.md
   - Demos: demos.md
   - Events: events.md
   - Blog:

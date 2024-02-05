@@ -1,0 +1,92 @@
+[
+    {
+        "language" : "中文",
+        "mode" : "流式",
+        "engine" : "torch",
+        "encoder" : "zipformer2",
+        "type": "RNNT",
+        "download" : "# version 1\ngit lfs install\ngit clone https://huggingface.co/pkufool/icefall-asr-zipformer-libriheavy-punc-large-20230926",
+        "usage" : "https://k2-fsa.github.io/sherpa/onnx/kws/pretrained_models/index.html#sherpa-onnx-kws-pre-trained-models"
+    },
+    {
+        "language" : "中文",
+        "mode" : "非流式",
+        "engine" : "torch",
+        "encoder" : "zipformer2",
+        "type": "RNNT",
+        "download" : "git lfs install\ngit clone https://huggingface.co/pkufool/icefall-asr-zipformer-libriheavy-punc-large-20230926",
+        "usage" : "https://k2-fsa.github.io/sherpa/onnx/kws/pretrained_models/index.html#sherpa-onnx-kws-pre-trained-models"
+    },
+    {
+        "language" : "中文",
+        "mode" : "流式",
+        "engine" : "onnx",
+        "encoder" : "zipformer2",
+        "type": "RNNT",
+        "download" : "git lfs install\ngit clone https://huggingface.co/pkufool/icefall-asr-zipformer-libriheavy-punc-large-20230926",
+        "usage" : "https://k2-fsa.github.io/sherpa/onnx/kws/pretrained_models/index.html#sherpa-onnx-kws-pre-trained-models"
+    },
+    {
+        "language" : "中文",
+        "mode" : "流式",
+        "engine" : "torch",
+        "encoder" : "zipformer2",
+        "type": "RNNT",
+        "download" : "# verison 2 \n\n git lfs install\ngit clone https://huggingface.co/pkufool/icefall-asr-zipformer-libriheavy-punc-large-20230926",
+        "usage" : "https://k2-fsa.github.io/sherpa/onnx/kws/pretrained_models/index.html#sherpa-onnx-kws-pre-trained-models"
+    },
+    {
+        "language" : "中文",
+        "mode" : "非流式",
+        "engine" : "ncnn",
+        "encoder" : "zipformer2",
+        "type": "RNNT",
+        "download" : "git lfs install\ngit clone https://huggingface.co/pkufool/icefall-asr-zipformer-libriheavy-punc-large-20230926",
+        "usage" : "https://k2-fsa.github.io/sherpa/onnx/kws/pretrained_models/index.html#sherpa-onnx-kws-pre-trained-models"
+    },
+    {
+        "language" : "中文",
+        "mode" : "流式",
+        "engine" : "torch",
+        "encoder" : "zipformer2",
+        "type": "CTC",
+        "download" : "git lfs install\ngit clone https://huggingface.co/pkufool/icefall-asr-zipformer-libriheavy-punc-large-20230926",
+        "usage" : "https://k2-fsa.github.io/sherpa/onnx/kws/pretrained_models/index.html#sherpa-onnx-kws-pre-trained-models"
+    },
+    {
+        "language" : "中文",
+        "mode" : "流式",
+        "engine" : "torch",
+        "encoder" : "zipformer2",
+        "type": "RNNT",
+        "download" : "git lfs install\ngit clone https://huggingface.co/pkufool/icefall-asr-zipformer-libriheavy-punc-large-20230926",
+        "usage" : "https://k2-fsa.github.io/sherpa/onnx/kws/pretrained_models/index.html#sherpa-onnx-kws-pre-trained-models"
+    },
+    {
+        "language" : "中文",
+        "mode" : "流式",
+        "engine" : "torch",
+        "encoder" : "zipformer",
+        "type": "RNNT",
+        "download" : "git lfs install\ngit clone https://huggingface.co/pkufool/icefall-asr-zipformer-libriheavy-punc-large-20230926",
+        "usage" : "https://k2-fsa.github.io/sherpa/onnx/kws/pretrained_models/index.html#sherpa-onnx-kws-pre-trained-models"
+    },
+    {
+        "language" : "中文",
+        "mode" : "流式",
+        "engine" : "torch",
+        "encoder" : "zipformer",
+        "type": "AED",
+        "download" : "git lfs install\ngit clone https://huggingface.co/pkufool/icefall-asr-zipformer-libriheavy-punc-large-20230926",
+        "usage" : "https://k2-fsa.github.io/sherpa/onnx/kws/pretrained_models/index.html#sherpa-onnx-kws-pre-trained-models"
+    },
+    {
+        "language" : "中文",
+        "mode" : "流式",
+        "engine" : "torch",
+        "encoder" : "LSTM",
+        "type": "CTC",
+        "download" : "git lfs install\ngit clone https://huggingface.co/pkufool/icefall-asr-zipformer-libriheavy-punc-large-20230926",
+        "usage" : "https://k2-fsa.github.io/sherpa/onnx/kws/pretrained_models/index.html#sherpa-onnx-kws-pre-trained-models"
+    }
+]

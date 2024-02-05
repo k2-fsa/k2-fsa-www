@@ -1,0 +1,9 @@
+[
+    {
+        "build" : "1.23.4",
+        "os" : "Linux",
+        "pytorch" : "1.9",
+        "platform" : "cuda10.1",
+        "install" : ""
+    }
+]
