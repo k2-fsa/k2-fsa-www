@@ -1,4 +1,4 @@
 ---
 comments: true
-title: Events for Next-gen Kaldi
+title: 新一代 Kaldi 历程
 ---

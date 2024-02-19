@@ -246,9 +246,9 @@
         let that = this;
         var path = '';
         if (document.documentElement.lang == "en") {
-          path = "/assets/data/asr_model_en.json";
+          path = "../../assets/data/asr_model_en.json";
         } else {
-          path = "/assets/data/asr_model_cn.json";
+          path = "../../assets/data/asr_model_cn.json";
         }
         window.fetch(path).then(
           function(response) {

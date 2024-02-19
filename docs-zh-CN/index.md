@@ -1,5 +1,5 @@
 ---
 template: home.html
-title: Next-gen Kaldi
+title: 新一代 Kaldi
 ---
 

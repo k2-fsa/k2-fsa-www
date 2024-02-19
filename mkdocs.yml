@@ -36,6 +36,7 @@ theme:
     - toc.follow
 
   palette:
+    primary: custom
     scheme: k2
 
   font:
@@ -48,6 +49,12 @@ theme:
 plugins:
   - search
   - blog
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+          remove_comments: true
 
 extra_css:
   - assets/stylesheets/extra.css
@@ -72,6 +79,7 @@ nav:
     - KWS: models/kws.md
   - Demos: demos.md
   - Events: events.md
+  - Publications: publications.md
   - Blog:
     - blog/index.md
 
@@ -130,14 +138,10 @@ extra:
 
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/squidfunk
-    - icon: fontawesome/brands/gitter
-      link: https://gitter.im/squidfunk/mkdocs-material
-    - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/r/squidfunk/mkdocs-material/
-    - icon: fontawesome/brands/python
-      link: https://pypi.org/project/mkdocs-material/
-    - icon: fontawesome/brands/mastodon
-      link: https://fosstodon.org/@squidfunk
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/squidfunk
+      link: https://github.com/k2-fsa
+    - icon: fontawesome/brands/weixin
+      link: http://test.kingway.fun/assets/pic/wechat_account.jpg
+    - icon: fontawesome/brands/weixin
+      link: http://test.kingway.fun/assets/pic/wechat_group.jpg
+    - icon: fontawesome/brands/qq
+      link: http://test.kingway.fun/assets/pic/qq_group.jpeg

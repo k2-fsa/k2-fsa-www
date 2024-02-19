@@ -39,6 +39,7 @@ theme:
     - toc.follow
 
   palette:
+    primary: custom
     scheme: k2
 
   font:
@@ -47,7 +48,14 @@ theme:
 
 plugins:
   - blog
-  - search
+  - search:
+      separator: '[\s\u200b\-]'
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+          remove_comments: true
 
 extra_css:
   - assets/stylesheets/extra.css
@@ -59,20 +67,23 @@ nav:
     - k2: get-started/k2.md
     - icefall: get-started/icefall.md
     - lhotse: get-started/lhotse.md
-    - sherpa: get-started/sherpa.md
-    - sherpa-ncnn: get-started/sherpa-ncnn.md
-    - sherpa-onnx: get-started/sherpa-onnx.md
+    - sherpa:
+      - get-started/sherpa/index.md
+      - sherpa-torch: get-started/sherpa/torch.md
+      - sherpa-ncnn: get-started/sherpa/ncnn.md
+      - sherpa-onnx: get-started/sherpa/onnx.md
   - 教程:
-    - Tutorials: tutorials/index.md
-    - Train a model: tutorials/train.md
-    - Deploy: tutorials/deploy.md
+    - 教程: tutorials/index.md
+    - 如何训练一个模型: tutorials/train.md
+    - 部署一个模型: tutorials/deploy.md
   - 模型:
     - 语音识别: models/asr.md
     - 语音合成: models/tts.md
     - 自定义唤醒: models/kws.md
   - 演示: demos.md
   - 事件: events.md
-  - 文章:
+  - 论文: publications.md
+  - 博客:
     - blog/index.md
 
 # Extensions
@@ -130,14 +141,14 @@ extra:
 
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/squidfunk
-    - icon: fontawesome/brands/gitter
-      link: https://gitter.im/squidfunk/mkdocs-material
-    - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/r/squidfunk/mkdocs-material/
-    - icon: fontawesome/brands/python
-      link: https://pypi.org/project/mkdocs-material/
-    - icon: fontawesome/brands/mastodon
-      link: https://fosstodon.org/@squidfunk
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/squidfunk
+      link: https://github.com/k2-fsa
+    - icon: fontawesome/brands/weixin
+      link: http://test.kingway.fun/assets/pic/wechat_account.jpg
+    - icon: fontawesome/brands/weixin
+      link: http://test.kingway.fun/assets/pic/wechat_group.jpg
+    - icon: fontawesome/brands/qq
+      link: http://test.kingway.fun/assets/pic/qq_group.jpeg
+    - icon: fontawesome/brands/zhihu
+      link: https://www.zhihu.com/people/yaozengwei
+    - icon: fontawesome/brands/bilibili
+      link: https://space.bilibili.com/1234519871
