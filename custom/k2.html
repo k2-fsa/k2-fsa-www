@@ -42,7 +42,11 @@
 
       <div class="row">
         <div class="col-2 p-2 matrix-k2-head">
+          {% if config.theme.language == 'en' %}
           Build
+          {% else %}
+          版本
+          {% endif %}
         </div>
         <div class="col-10">
           <div class="d-flex">
@@ -131,7 +135,8 @@
 
 {% block scripts %}
   {{ super() }}
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://unpkg.com/vue@3.4.19/dist/vue.global.prod.js"></script>
+  <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script> -->
   <!-- MDB -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.js"></script>
   <!-- <script src="../../assets/javascripts/mdb.min.js"></script>  -->

@@ -57,6 +57,11 @@ plugins:
       htmlmin_opts:
           remove_comments: true
 
+extra_javascript:
+  - assets/javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
 extra_css:
   - assets/stylesheets/extra.css
 
@@ -74,13 +79,15 @@ nav:
       - sherpa-onnx: get-started/sherpa/onnx.md
   - 教程:
     - 教程: tutorials/index.md
-    - 如何训练一个模型: tutorials/train.md
-    - 部署一个模型: tutorials/deploy.md
+    - icefall 手把手教程: tutorials/icefall-for-dummies.md
   - 模型:
     - 语音识别: models/asr.md
     - 语音合成: models/tts.md
     - 自定义唤醒: models/kws.md
-  - 演示: demos.md
+  - 演示:
+    - 语音识别: demos/asr.md
+    - 语音合成: demos/tts.md
+    - 自定义唤醒: demos/kws.md
   - 事件: events.md
   - 论文: publications.md
   - 博客:
@@ -111,10 +118,6 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.keys
-  - pymdownx.magiclink:
-      repo_url_shorthand: true
-      user: squidfunk
-      repo: mkdocs-material
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.superfences:
@@ -143,11 +146,11 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/k2-fsa
     - icon: fontawesome/brands/weixin
-      link: http://test.kingway.fun/assets/pic/wechat_account.jpg
+      link: https://k2-fsa.org/assets/pic/wechat_account.jpg
     - icon: fontawesome/brands/weixin
-      link: http://test.kingway.fun/assets/pic/wechat_group.jpg
+      link: https://k2-fsa.org/assets/pic/wechat_group.jpg
     - icon: fontawesome/brands/qq
-      link: http://test.kingway.fun/assets/pic/qq_group.jpeg
+      link: https://k2-fsa.org/assets/pic/qq_group.jpeg
     - icon: fontawesome/brands/zhihu
       link: https://www.zhihu.com/people/yaozengwei
     - icon: fontawesome/brands/bilibili

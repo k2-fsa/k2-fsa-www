@@ -8,6 +8,8 @@ comments: true
 
 # Introduction
 
+![]("../assets/images/ngk-matrix.png")
+
 The icefall project contains speech-related recipes for various datasets
 using [k2-fsa](https://github.com/k2-fsa/k2) and [lhotse](https://github.com/lhotse-speech/lhotse).
 

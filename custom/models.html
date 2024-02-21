@@ -141,7 +141,7 @@
         </div>
       </div>
 
-      <div v-if="show_version" class="row">
+      <div v-show="show_version" class="row">
         <div class="col-2 p-2 matrix-k2-head">
           {% if config.theme.language == 'en' %}
           Version
@@ -206,7 +206,7 @@
 
 {% block scripts %}
   {{ super() }}
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://unpkg.com/vue@3.4.19/dist/vue.global.prod.js"></script>
   <!-- MDB -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.js"></script>
   <!-- <script src="../assets/javascripts/mdb.min.js"></script> -->
@@ -224,7 +224,7 @@
           encoder: '',
           type: '',
           download: '',
-          uage: '',
+          usage: '',
           description: '',
           version: '',
           show_version: false,
@@ -289,30 +289,35 @@
           }
           this.language_list = this.get_item_list(this.language_indexes, "language");
           this.update_language(this.language_list[0])
+          console.log("language: " + this.language_list);
         },
         update_language(item) {
           this.language = item;
           this.type_indexes = this.get_index_list(this.language_indexes, "language", item);
           this.type_list = this.get_item_list(this.type_indexes, "type");
           this.update_type(this.type_list[0]);
+          console.log("type: " + this.type_list);
         },
         update_type(item) {
           this.type = item;
           this.engine_indexes = this.get_index_list(this.type_indexes, "type", item);
           this.engine_list = this.get_item_list(this.engine_indexes, "engine");
           this.update_engine(this.engine_list[0]);
+          console.log("engine: " + this.engine_list);
         },
         update_engine(item) {
           this.engine = item;
           this.encoder_indexes = this.get_index_list(this.engine_indexes, "engine", item);
           this.encoder_list = this.get_item_list(this.encoder_indexes, "encoder");
           this.update_encoder(this.encoder_list[0]);
+          console.log("encoder: " + this.encoder_list);
         },
         update_encoder(item) {
           this.encoder = item;
           this.mode_indexes = this.get_index_list(this.encoder_indexes, "encoder", item);
           this.mode_list = this.get_item_list(this.mode_indexes, "mode");
           this.update_mode(this.mode_list[0]);
+          console.log("mode: " + this.mode_list);
         },
         update_mode(item){
           this.mode = item;
@@ -321,17 +326,18 @@
           for (let i = 0; i < this.version_indexes.length; ++i) {
             version_list.push(i);
           }
-          console.log(version_list);
+          this.version_list = version_list;
+          console.log("version: " + this.version_list);
           if (version_list.length == 1) {
             this.show_version = false;
-            this.download = this.sources[this.version_indexes[0]].download;
-            this.usage = this.sources[this.version_indexes[0]].usage;
-            this.description = this.sources[this.version_indexes[0]].description;
+            // this.download = this.sources[this.version_indexes[0]].download;
+            // this.usage = this.sources[this.version_indexes[0]].usage;
+            // this.description = this.sources[this.version_indexes[0]].description;
+            // this.update_version(this.version_list[0]);
           } else {
             this.show_version = true;
-            this.version_list = version_list;
-            this.update_version(this.version_list[0]);
           }
+          this.update_version(this.version_list[0]);
         },
         update_version(item) {
           this.version = item;
