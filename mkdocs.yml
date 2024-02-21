@@ -67,20 +67,25 @@ extra_css:
 nav:
   - Home: index.md
   - Get started:
-    - Get started: get-started/index.md
+    - get-started/index.md
     - k2: get-started/k2.md
-    - icefall: get-started/icefall.md
-    - lhotse: get-started/lhotse.md
-    - sherpa: get-started/sherpa.md
-    - sherpa-ncnn: get-started/sherpa-ncnn.md
-    - sherpa-onnx: get-started/sherpa-onnx.md
+    - Icefall: get-started/icefall.md
+    - Lhotse: get-started/lhotse.md
+    - Sherpa:
+      - get-started/sherpa/index.md
+      - Sherpa-torch: get-started/sherpa/torch.md
+      - Sherpa-ncnn: get-started/sherpa/ncnn.md
+      - Sherpa-onnx: get-started/sherpa/onnx.md
   # - Tutorials:
   #   - Tutorials: tutorials/index.md
   - Models:
     - ASR: models/asr.md
     - TTS: models/tts.md
     - KWS: models/kws.md
-  - Demos: demos.md
+  - Demos:
+    - ASR: demos/asr.md
+    - TTS: demos/tts.md
+    - KWS: demos/kws.md
   - Events: events.md
   - Publications: publications.md
   - Blog:

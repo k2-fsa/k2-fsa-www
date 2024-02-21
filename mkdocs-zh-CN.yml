@@ -70,13 +70,13 @@ nav:
   - 从这开始:
     - get-started/index.md
     - k2: get-started/k2.md
-    - icefall: get-started/icefall.md
-    - lhotse: get-started/lhotse.md
-    - sherpa:
+    - Icefall: get-started/icefall.md
+    - Lhotse: get-started/lhotse.md
+    - Sherpa:
       - get-started/sherpa/index.md
-      - sherpa-torch: get-started/sherpa/torch.md
-      - sherpa-ncnn: get-started/sherpa/ncnn.md
-      - sherpa-onnx: get-started/sherpa/onnx.md
+      - Sherpa-torch: get-started/sherpa/torch.md
+      - Sherpa-ncnn: get-started/sherpa/ncnn.md
+      - Sherpa-onnx: get-started/sherpa/onnx.md
   - 教程:
     - 教程: tutorials/index.md
     - icefall 手把手教程: tutorials/icefall-for-dummies.md

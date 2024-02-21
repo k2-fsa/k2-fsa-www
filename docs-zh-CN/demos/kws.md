@@ -1,5 +1,4 @@
 ---
-template: demo.html
 comments: true
-title: 新一代 Kaldi 演示
+title: 关键词识别演示
 ---
