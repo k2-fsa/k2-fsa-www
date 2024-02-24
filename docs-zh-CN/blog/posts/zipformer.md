@@ -23,7 +23,7 @@ slug: zipformer-details
 - 新优化器：**ScaledAdam** 优化器
 - 激活值限制：**Balancer** 和 **Whitener** 
 
-> 建议读者阅读论文了解更多细节：https://arxiv.org/pdf/2310.11230.pdf 
+> 建议读者阅读论文了解更多细节：[https://arxiv.org/pdf/2310.11230.pdf](https://arxiv.org/pdf/2310.11230.pdf)
 
 ## 方法
 
