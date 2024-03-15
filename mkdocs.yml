@@ -55,6 +55,15 @@ plugins:
       minify_css: true
       htmlmin_opts:
           remove_comments: true
+  - mkdocs-jupyter:
+      include_source: True
+      include_requirejs: true
+  - git-committers:
+      repository: pkufool/k2-fsa-www
+      branch: main_page
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: date
 
 extra_javascript:
   - assets/javascripts/mathjax.js
@@ -138,10 +147,10 @@ markdown_extensions:
 extra:
   alternate:  
     - name: English
-      link: /
+      link: /k2/
       lang: en
     - name: 中文
-      link: /zh-CN/
+      link: /k2/zh-CN/
       lang: zh
 
   social:
