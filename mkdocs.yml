@@ -147,10 +147,10 @@ markdown_extensions:
 extra:
   alternate:  
     - name: English
-      link: /k2/
+      link: /
       lang: en
     - name: 中文
-      link: /k2/zh-CN/
+      link: /zh-CN/
       lang: zh
 
   social:
