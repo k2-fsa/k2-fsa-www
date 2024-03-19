@@ -85,8 +85,6 @@ nav:
       - Sherpa-torch: get-started/sherpa/torch.md
       - Sherpa-ncnn: get-started/sherpa/ncnn.md
       - Sherpa-onnx: get-started/sherpa/onnx.md
-  # - Tutorials:
-  #   - Tutorials: tutorials/index.md
   - Models:
     - ASR: models/asr.md
     - TTS: models/tts.md

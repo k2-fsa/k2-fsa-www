@@ -86,9 +86,6 @@ nav:
       - Sherpa-torch: get-started/sherpa/torch.md
       - Sherpa-ncnn: get-started/sherpa/ncnn.md
       - Sherpa-onnx: get-started/sherpa/onnx.md
-  - 教程:
-    - 教程: tutorials/index.md
-    - icefall 手把手教程: tutorials/icefall-for-dummies.md
   - 模型:
     - 语音识别: models/asr.md
     - 语音合成: models/tts.md
