@@ -51,17 +51,21 @@
         <div class="col-10">
           <div class="d-flex">
             <div 
-              v-for="(item, index) in k2_build_list"
-              @click="update_k2_build(item)"
+              v-for="(item, index) in build_list"
+              @click="update_build(item)"
               class="p-2 flex-fill matrix-k2-item"
-              :class="{ 'matrix-k2-item-select': k2_build==item }">[[ item ]]</div>
+              :class="{ 'matrix-k2-item-select': build==item }">[[ item ]]</div>
           </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-2 p-2 matrix-k2-head">
+          {% if config.theme.language == 'en' %}
           OS
+          {% else %}
+          操作系统
+          {% endif %}
         </div>
         <div class="col-10">
           <div class="d-flex">
@@ -76,27 +80,12 @@
 
       <div class="row">
         <div class="col-2 p-2 matrix-k2-head">
-          Package
-        </div>
-        <div class="col-10">
-          <div class="d-flex">
-            <div 
-              v-for="(item, index) in source_list"
-              @click="update_source(item)"
-              class="p-2 flex-fill matrix-k2-item"
-              :class="{ 'matrix-k2-item-select': source==item }">[[ item ]]</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-2 p-2 matrix-k2-head">
           Pytorch
         </div>
         <div class="col-10">
           <div class="d-flex">
             <div 
-              v-for="(value, item, index) in pytorch_cuda_list"
+              v-for="(item, index) in pytorch_list"
               @click="update_pytorch(item)"
               class="p-2 flex-fill matrix-k2-item"
               :class="{ 'matrix-k2-item-select': pytorch==item }">[[ item ]]</div>
@@ -106,22 +95,30 @@
 
       <div class="row">
         <div class="col-2 p-2 matrix-k2-head">
+          {% if config.theme.language == 'en' %}
           Platform
+          {% else %}
+          平台
+          {% endif %}
         </div>
         <div class="col-10">
           <div class="d-flex">
             <div 
-              v-for="(item, index) in pytorch_cuda_list[pytorch]"
-              @click="update_cuda(item)"
+              v-for="(item, index) in platform_list"
+              @click="update_platform(index)"
               class="p-2 flex-fill matrix-k2-item"
-              :class="{ 'matrix-k2-item-select': cuda==item }">[[ item == 'CPU' ? 'CPU' : 'CUDA'+item ]]</div>
+              :class="{ 'matrix-k2-item-select': platform==item }">[[ item ]]</div>
           </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-2 p-2 matrix-k2-head">
-          Command:
+          {% if config.theme.language == 'en' %}
+          Install
+          {% else %}
+          安装方法
+          {% endif %}
         </div>
         <div class="col-10">
             <div class="p-2 matrix-k2-install">[[ install ]]</div>
@@ -148,109 +145,95 @@
       delimiters: ["[[", "]]"],
       data() {
         return {
-          k2_build: 'Latest',
-          os: 'Linux',
-          source: 'Pip',
-          pytorch: '2.0.1',
-          cuda: '11.8',
+          build: '',
+          os: '',
+          pytorch: '',
+          platform: '',
           install: '',
-          k2_build_list: ['Latest'],
-          os_list: ['Linux', 'Mac', 'Windows'],
-          source_list: ['Pip', 'Source'],
-          pytorch_cuda_list: {'2.0.1' : ['CPU', '11.8', '11.7']},
-          pytorch_cuda: {},
-          pytorch_cpu: {},
+          build_list: [],
+          build_indexes: [],
+          os_list: [],
+          os_indexes: [],
+          pytorch_list: [],
+          pytorch_indexes: [],
+          platform_list: [],
+          platform_indexes: [],
+          sources: [],
         }
       },
       mounted() {
         let that = this;
-        window.fetch("https://k2-fsa.github.io/k2/cuda.html").then(
+        var path = '';
+        if (document.documentElement.lang == "en") {
+          path = "../../assets/data/k2_whl_en.json";
+        } else {
+          path = "../../assets/data/k2_whl_cn.json";
+        }
+        window.fetch(path).then(
           function(response) {
-            return response.text();
-          }).then(function(data) {
-            let v_list = data.split("<br/>");
-            let torch_cuda = Object();
-            let torch_cpu = Object();
-            for (let i = 0; i < v_list.length; ++i) {
-              let item = v_list[i].split(">")[1].trim();
-              let i_1 = item.indexOf("+");
-              let i_2 = item.indexOf("torch");
-              let i_3 = item.indexOf("-cp");
-              let k2_v = item.substring(3, i_1);
-              let cuda_v = item.substring(i_1 + 1, i_2 - 1);
-              let torch_v = item.substring(i_2, i_3);
-              if (i == 0) {
-                that.k2_build = k2_v;
-                that.k2_build_list = [k2_v];
-                that.pytorch = torch_v.slice(5);
-                that.cuda = cuda_v.slice(4);
-              }
-              if (k2_v != that.k2_build) {
-                break;
-              }
-              if (torch_cuda[torch_v.slice(5)] != undefined && torch_cuda[torch_v.slice(5)].slice(-1) != cuda_v.slice(4)) {
-                torch_cuda[torch_v.slice(5)].push(cuda_v.slice(4));
-              } else {
-                torch_cuda[torch_v.slice(5)] = ['CPU', cuda_v.slice(4)];
-                torch_cpu[torch_v.slice(5)] = ['CPU'];
-              }
-            }
-            that.pytorch_cuda = torch_cuda;
-            that.pytorch_cuda_list = torch_cuda;
-            that.pytorch_cpu = torch_cpu;
-            that.update_install();
-          }).catch(function(err) {
-            console.log('Fetch Error :-S', err);
-        });
+            return response.json();
+        }).then(function(data) {
+            that.sources = data;
+            that.init();
+        })
       },
       methods: {
-        update_k2_build(item) {
-          this.k2_build = item;
-          this.update_install();
+        get_item_list(indexes, key) {
+          var item_list = [];
+          for (let i = 0; i < indexes.length; ++i) {
+            let index = indexes[i];
+            let item = this.sources[index];
+            if (item_list.includes(item[key])) {
+              continue;
+            } else {
+              item_list.push(item[key]);
+            }
+          }
+          return item_list;
         },
-        update_pytorch(item){
-          this.pytorch = item;
-          this.cuda = 'CPU';
-          this.update_install();
+        get_index_list(indexes, key, value) {
+          var index_list = [];
+          for (let i = 0; i < indexes.length; ++i) {
+            let index = indexes[i];
+            let item = this.sources[index];
+            if (item[key] == value) {
+              index_list.push(index);
+            }
+          }
+          return index_list;
+        },
+        init() {
+          for (let i = 0; i < this.sources.length; ++i) {
+            this.build_indexes.push(i);
+          }
+          this.build_list = this.get_item_list(this.build_indexes, "build");
+          this.update_build(this.build_list[0])
+          console.log("build: " + this.build_list);
+        },
+        update_build(item) {
+          this.build = item;
+          this.os_indexes = this.get_index_list(this.build_indexes, "build", item);
+          this.os_list = this.get_item_list(this.os_indexes, "os");
+          this.update_os(this.os_list[0]);
+          console.log("os: " + this.os_list);
         },
         update_os(item) {
           this.os = item;
-          if (item == "Mac" || item == "Windows") {
-            this.pytorch_cuda_list = this.pytorch_cpu;
-            this.cuda = 'CPU';
-          } else {
-            this.pytorch_cuda_list = this.pytorch_cuda;
-          }
-          this.update_install();
+          this.pytorch_indexes = this.get_index_list(this.os_indexes, "os", item);
+          this.pytorch_list = this.get_item_list(this.pytorch_indexes, "pytorch");
+          this.update_pytorch(this.pytorch_list[0]);
+          console.log("pytorch: " + this.pytorch_list);
         },
-        update_source(item) {
-          this.source = item;
-          this.update_install();
+        update_pytorch(item) {
+          this.pytorch = item;
+          this.platform_indexes = this.get_index_list(this.pytorch_indexes, "pytorch", item);
+          this.platform_list = this.get_item_list(this.platform_indexes, "platform");
+          this.update_platform(0);
+          console.log("platform: " + this.platform_list);
         },
-        update_cuda(item){
-          this.cuda = item;
-          this.update_install();
-        },
-        update_install () {
-          if (this.source == "Source") {
-            this.install = "# Follow instructions at this URL: https://k2-fsa.github.io/k2/installation/from_source.html"
-          } else {
-            if (this.cuda == 'CPU') {
-               this.install = "# Install Pytorch\n" + 
-                              "pip install torch==" + this.pytorch + "+cpu" +
-                              " -f https://download.pytorch.org/whl/torch_stable.html\n\n" +
-                              "# Install k2\n" +
-                              "pip install k2==" + this.k2_build + "+cpu.torch" +
-                              this.pytorch + " -f https://k2-fsa.github.io/k2/cpu.html"
-            } else {
-               this.install = "# Install Pytorch\n" +
-                              "pip install torch==" + this.pytorch + "+cu" + this.cuda.replace(".", "") +
-                              " -f https://download.pytorch.org/whl/torch_stable.html\n\n" +
-                              "# Install k2\n" +
-                              "pip install k2==" + this.k2_build + "+cuda" + this.cuda + ".torch" +
-                              this.pytorch + " -f https://k2-fsa.github.io/k2/cpu.html"
-            }
-          }
+        update_platform(item) {
+          this.platform = this.platform_list[item];
+          this.install = this.sources[this.platform_indexes[item]].install
         },
       },
     }).mount('#app')

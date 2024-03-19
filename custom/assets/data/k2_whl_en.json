@@ -4,7 +4,6 @@
         "os" : "Linux",
         "pytorch" : "1.9",
         "platform" : "cuda10.1",
-        "mirror": "huggingface",
         "install" : ""
     }
 ]

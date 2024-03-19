@@ -101,6 +101,8 @@ nav:
   - 论文: publications.md
   - 博客:
     - blog/index.md
+  - 留言板:
+    - message.md
 
 # Extensions
 markdown_extensions:

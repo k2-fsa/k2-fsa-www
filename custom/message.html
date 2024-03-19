@@ -1,0 +1,26 @@
+{% extends "main.html" %}
+
+{% block content %}
+  {{ super() }}
+
+  <h2 id="__comments" style="padding-top: 10px">{{ 留言板 }}</h2>
+
+  <!-- CSS -->
+  <link href="https://unpkg.com/artalk@2.8.2/dist/Artalk.css" rel="stylesheet">
+  
+  <!-- JS -->
+  <script src="https://unpkg.com/artalk@2.8.2/dist/Artalk.js"></script>
+  
+  <!-- Artalk -->
+  <div id="tcomment"></div>
+  <script>
+    Artalk.init({
+      el:        '#tcomment',              // 绑定元素的 Selector
+      pageKey:   '',                       // 固定链接 (留空自动获取)
+      pageTitle: '',                       // 页面标题 (留空自动获取)
+      server:    'https://artalk.kingway.fun',  // 后端地址
+      site:      'k2留言板',           // 你的站点名
+    })
+  </script>
+
+{% endblock %}

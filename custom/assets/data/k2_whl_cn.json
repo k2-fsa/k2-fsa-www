@@ -1,0 +1,37 @@
+[
+    {
+        "build" : "1.23.4",
+        "os" : "Linux",
+        "pytorch" : "1.9",
+        "platform" : "cuda10.1",
+        "install" : "pip install k1"
+    },
+    {
+        "build" : "1.23.4",
+        "os" : "Macos",
+        "pytorch" : "1.9",
+        "platform" : "cuda10.1",
+        "install" : "pip install k5"
+    },
+    {
+        "build" : "1.23.4",
+        "os" : "Linux",
+        "pytorch" : "1.8",
+        "platform" : "cuda11.1",
+        "install" : "pip install k4"
+    },
+    {
+        "build" : "1.23.3",
+        "os" : "Linux",
+        "pytorch" : "1.9",
+        "platform" : "cuda10.2",
+        "install" : "pip install k3"
+    },
+    {
+        "build" : "1.23.3",
+        "os" : "Macos",
+        "pytorch" : "1.9",
+        "platform" : "cuda10.1",
+        "install" : "pip install k6"
+    }
+]

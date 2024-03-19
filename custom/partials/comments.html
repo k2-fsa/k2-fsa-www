@@ -1,6 +1,11 @@
 {% if page.meta.comments %}
 
 <h2 id="__comments" style="padding-top: 10px">{{ lang.t("meta.comments") }}</h2>
+
+  {% if config.theme.language == 'zh' %}
+  <blockquote> 如果你没有 github 账号，可以在留言板把你的问题告诉我们。 </blockquote>
+  {% endif %}
+
   <!-- Insert generated snippet here -->
 
   <!-- Synchronize Giscus theme with palette -->
