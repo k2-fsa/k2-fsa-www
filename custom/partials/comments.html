@@ -1,11 +1,13 @@
 {% if page.meta.comments %}
 
-<h2 id="__comments" style="padding-top: 10px">{{ lang.t("meta.comments") }}</h2>
+<h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
 
   {% if config.theme.language == 'zh' %}
-  <blockquote> 如果您通过 github 登录评论有困难，可以在留言板把你的问题告诉我们。 </blockquote>
+  <blockquote>
+    您在使用过程中遇到任何问题都可以通过下方评论告诉我们，您也可以加入我们的<a href="https://k2-fsa.org/assets/pic/wechat_group.jpg" target="_blank" style="color:#005DC1">微信</a>和<a href="https://k2-fsa.org/assets/pic/qq_group.jpeg" target="_blank" style="color:#005DC1">QQ</a>群与广大开发者一起交流。<br>
+    如果您通过 github 登录评论有困难，可以在留言板把你的问题告诉我们。
+  </blockquote>
   {% endif %}
-
   <!-- Insert generated snippet here -->
 
   <!-- Synchronize Giscus theme with palette -->
