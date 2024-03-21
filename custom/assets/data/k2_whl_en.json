@@ -1,9 +1,1311 @@
 [
-    {
-        "build" : "1.23.4",
-        "os" : "Linux",
-        "pytorch" : "1.9",
-        "platform" : "cuda10.1",
-        "install" : ""
-    }
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "2.3.0",
+    "platform": "CUDA121",
+    "install": "# Install Pytorch\n    pip install torch==2.3.0.dev20240229 --index-url https://download.pytorch.org/whl/cu121\n\n    # Install k2\n    pip install k2==1.24.4.dev20240301+cuda12.1.torch2.3.0.dev20240229 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "2.3.0",
+    "platform": "CUDA118",
+    "install": "# Install Pytorch\n    pip install torch==2.3.0.dev20240229 --index-url https://download.pytorch.org/whl/cu118\n\n    # Install k2\n    pip install k2==1.24.4.dev20240301+cuda11.8.torch2.3.0.dev20240229 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "2.2.1",
+    "platform": "CUDA121",
+    "install": "# Install Pytorch\n    pip install torch==2.2.1 --index-url https://download.pytorch.org/whl/cu121\n\n    # Install k2\n    pip install k2==1.24.4.dev20240301+cuda12.1.torch2.2.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Windows",
+    "pytorch": "2.2.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.2.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch2.2.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Windows",
+    "pytorch": "2.2.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.2.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch2.2.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Windows",
+    "pytorch": "2.1.2",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.1.2 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch2.1.2 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Windows",
+    "pytorch": "2.1.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.1.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch2.1.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Windows",
+    "pytorch": "2.1.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.1.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch2.1.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Windows",
+    "pytorch": "2.0.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.0.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch2.0.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Windows",
+    "pytorch": "2.0.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.0.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch2.0.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Windows",
+    "pytorch": "1.13.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.13.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.13.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Windows",
+    "pytorch": "1.13.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.13.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.13.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Windows",
+    "pytorch": "1.12.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.12.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.12.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Windows",
+    "pytorch": "1.12.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.12.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.12.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Macos",
+    "pytorch": "2.2.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.2.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch2.2.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Macos",
+    "pytorch": "2.2.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.2.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch2.2.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Macos",
+    "pytorch": "2.1.2",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.1.2 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch2.1.2 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Macos",
+    "pytorch": "2.1.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.1.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch2.1.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Macos",
+    "pytorch": "2.1.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.1.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch2.1.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Macos",
+    "pytorch": "2.0.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.0.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch2.0.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Macos",
+    "pytorch": "2.0.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.0.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch2.0.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Macos",
+    "pytorch": "1.9.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.9.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.9.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Macos",
+    "pytorch": "1.9.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.9.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.9.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Macos",
+    "pytorch": "1.8.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.8.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.8.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Macos",
+    "pytorch": "1.8.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.8.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.8.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Macos",
+    "pytorch": "1.7.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.7.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.7.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Macos",
+    "pytorch": "1.7.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.7.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.7.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Macos",
+    "pytorch": "1.13.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.13.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.13.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Macos",
+    "pytorch": "1.13.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.13.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.13.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Macos",
+    "pytorch": "1.12.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.12.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.12.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Macos",
+    "pytorch": "1.12.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.12.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.12.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Macos",
+    "pytorch": "1.11.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.11.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.11.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Macos",
+    "pytorch": "1.10.2",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.10.2 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.10.2 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Macos",
+    "pytorch": "1.10.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.10.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.10.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Macos",
+    "pytorch": "1.10.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.10.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.10.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "2.2.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.2.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch2.2.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "2.2.1",
+    "platform": "CUDA118",
+    "install": "# Install Pytorch\n    pip install torch==2.2.1 --index-url https://download.pytorch.org/whl/cu118\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda11.8.torch2.2.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "2.2.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.2.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch2.2.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "2.2.0",
+    "platform": "CUDA121",
+    "install": "# Install Pytorch\n    pip install torch==2.2.0 --index-url https://download.pytorch.org/whl/cu121\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda12.1.torch2.2.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "2.2.0",
+    "platform": "CUDA118",
+    "install": "# Install Pytorch\n    pip install torch==2.2.0 --index-url https://download.pytorch.org/whl/cu118\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda11.8.torch2.2.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "2.1.2",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.1.2 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch2.1.2 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "2.1.2",
+    "platform": "CUDA121",
+    "install": "# Install Pytorch\n    pip install torch==2.1.2 --index-url https://download.pytorch.org/whl/cu121\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda12.1.torch2.1.2 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "2.1.2",
+    "platform": "CUDA118",
+    "install": "# Install Pytorch\n    pip install torch==2.1.2 --index-url https://download.pytorch.org/whl/cu118\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda11.8.torch2.1.2 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "2.1.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.1.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch2.1.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "2.1.1",
+    "platform": "CUDA121",
+    "install": "# Install Pytorch\n    pip install torch==2.1.1 --index-url https://download.pytorch.org/whl/cu121\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda12.1.torch2.1.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "2.1.1",
+    "platform": "CUDA118",
+    "install": "# Install Pytorch\n    pip install torch==2.1.1 --index-url https://download.pytorch.org/whl/cu118\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda11.8.torch2.1.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "2.1.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.1.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch2.1.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "2.1.0",
+    "platform": "CUDA121",
+    "install": "# Install Pytorch\n    pip install torch==2.1.0 --index-url https://download.pytorch.org/whl/cu121\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda12.1.torch2.1.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "2.1.0",
+    "platform": "CUDA118",
+    "install": "# Install Pytorch\n    pip install torch==2.1.0 --index-url https://download.pytorch.org/whl/cu118\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda11.8.torch2.1.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "2.0.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.0.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch2.0.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "2.0.1",
+    "platform": "CUDA118",
+    "install": "# Install Pytorch\n    pip install torch==2.0.1 --index-url https://download.pytorch.org/whl/cu118\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda11.8.torch2.0.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "2.0.1",
+    "platform": "CUDA117",
+    "install": "# Install Pytorch\n    pip install torch==2.0.1 --index-url https://download.pytorch.org/whl/cu117\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda11.7.torch2.0.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "2.0.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.0.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch2.0.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "2.0.0",
+    "platform": "CUDA118",
+    "install": "# Install Pytorch\n    pip install torch==2.0.0 --index-url https://download.pytorch.org/whl/cu118\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda11.8.torch2.0.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "2.0.0",
+    "platform": "CUDA117",
+    "install": "# Install Pytorch\n    pip install torch==2.0.0 --index-url https://download.pytorch.org/whl/cu117\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda11.7.torch2.0.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.9.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.9.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.9.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.9.1",
+    "platform": "CUDA111",
+    "install": "# Install Pytorch\n    pip install torch==1.9.1 --index-url https://download.pytorch.org/whl/cu111\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda11.1.torch1.9.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.9.1",
+    "platform": "CUDA102",
+    "install": "# Install Pytorch\n    pip install torch==1.9.1 --index-url https://download.pytorch.org/whl/cu102\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda10.2.torch1.9.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.9.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.9.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.9.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.9.0",
+    "platform": "CUDA111",
+    "install": "# Install Pytorch\n    pip install torch==1.9.0 --index-url https://download.pytorch.org/whl/cu111\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda11.1.torch1.9.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.9.0",
+    "platform": "CUDA102",
+    "install": "# Install Pytorch\n    pip install torch==1.9.0 --index-url https://download.pytorch.org/whl/cu102\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda10.2.torch1.9.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.8.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.8.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.8.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.8.1",
+    "platform": "CUDA111",
+    "install": "# Install Pytorch\n    pip install torch==1.8.1 --index-url https://download.pytorch.org/whl/cu111\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda11.1.torch1.8.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.8.1",
+    "platform": "CUDA102",
+    "install": "# Install Pytorch\n    pip install torch==1.8.1 --index-url https://download.pytorch.org/whl/cu102\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda10.2.torch1.8.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.8.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.8.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.8.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.8.0",
+    "platform": "CUDA111",
+    "install": "# Install Pytorch\n    pip install torch==1.8.0 --index-url https://download.pytorch.org/whl/cu111\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda11.1.torch1.8.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.8.0",
+    "platform": "CUDA102",
+    "install": "# Install Pytorch\n    pip install torch==1.8.0 --index-url https://download.pytorch.org/whl/cu102\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda10.2.torch1.8.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.7.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.7.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.7.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.7.1",
+    "platform": "CUDA102",
+    "install": "# Install Pytorch\n    pip install torch==1.7.1 --index-url https://download.pytorch.org/whl/cu102\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda10.2.torch1.7.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.7.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.7.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.7.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.7.0",
+    "platform": "CUDA102",
+    "install": "# Install Pytorch\n    pip install torch==1.7.0 --index-url https://download.pytorch.org/whl/cu102\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda10.2.torch1.7.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.6.0",
+    "platform": "CUDA102",
+    "install": "# Install Pytorch\n    pip install torch==1.6.0 --index-url https://download.pytorch.org/whl/cu102\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda10.2.torch1.6.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.13.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.13.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.13.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.13.1",
+    "platform": "CUDA117",
+    "install": "# Install Pytorch\n    pip install torch==1.13.1 --index-url https://download.pytorch.org/whl/cu117\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda11.7.torch1.13.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.13.1",
+    "platform": "CUDA116",
+    "install": "# Install Pytorch\n    pip install torch==1.13.1 --index-url https://download.pytorch.org/whl/cu116\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda11.6.torch1.13.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.13.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.13.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.13.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.13.0",
+    "platform": "CUDA117",
+    "install": "# Install Pytorch\n    pip install torch==1.13.0 --index-url https://download.pytorch.org/whl/cu117\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda11.7.torch1.13.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.13.0",
+    "platform": "CUDA116",
+    "install": "# Install Pytorch\n    pip install torch==1.13.0 --index-url https://download.pytorch.org/whl/cu116\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda11.6.torch1.13.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.12.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.12.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.12.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.12.1",
+    "platform": "CUDA116",
+    "install": "# Install Pytorch\n    pip install torch==1.12.1 --index-url https://download.pytorch.org/whl/cu116\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda11.6.torch1.12.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.12.1",
+    "platform": "CUDA113",
+    "install": "# Install Pytorch\n    pip install torch==1.12.1 --index-url https://download.pytorch.org/whl/cu113\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda11.3.torch1.12.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.12.1",
+    "platform": "CUDA102",
+    "install": "# Install Pytorch\n    pip install torch==1.12.1 --index-url https://download.pytorch.org/whl/cu102\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda10.2.torch1.12.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.12.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.12.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.12.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.12.0",
+    "platform": "CUDA116",
+    "install": "# Install Pytorch\n    pip install torch==1.12.0 --index-url https://download.pytorch.org/whl/cu116\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda11.6.torch1.12.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.12.0",
+    "platform": "CUDA113",
+    "install": "# Install Pytorch\n    pip install torch==1.12.0 --index-url https://download.pytorch.org/whl/cu113\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda11.3.torch1.12.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.12.0",
+    "platform": "CUDA102",
+    "install": "# Install Pytorch\n    pip install torch==1.12.0 --index-url https://download.pytorch.org/whl/cu102\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda10.2.torch1.12.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.11.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.11.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.11.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.11.0",
+    "platform": "CUDA115",
+    "install": "# Install Pytorch\n    pip install torch==1.11.0 --index-url https://download.pytorch.org/whl/cu115\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda11.5.torch1.11.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.11.0",
+    "platform": "CUDA113",
+    "install": "# Install Pytorch\n    pip install torch==1.11.0 --index-url https://download.pytorch.org/whl/cu113\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda11.3.torch1.11.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.11.0",
+    "platform": "CUDA102",
+    "install": "# Install Pytorch\n    pip install torch==1.11.0 --index-url https://download.pytorch.org/whl/cu102\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda10.2.torch1.11.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.10.2",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.10.2 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.10.2 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.10.2",
+    "platform": "CUDA102",
+    "install": "# Install Pytorch\n    pip install torch==1.10.2 --index-url https://download.pytorch.org/whl/cu102\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda10.2.torch1.10.2 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.10.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.10.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.10.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.10.1",
+    "platform": "CUDA102",
+    "install": "# Install Pytorch\n    pip install torch==1.10.1 --index-url https://download.pytorch.org/whl/cu102\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda10.2.torch1.10.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.10.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.10.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cpu.torch1.10.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.10.0",
+    "platform": "CUDA102",
+    "install": "# Install Pytorch\n    pip install torch==1.10.0 --index-url https://download.pytorch.org/whl/cu102\n\n    # Install k2\n    pip install k2==1.24.4.dev20240223+cuda10.2.torch1.10.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Macos",
+    "pytorch": "1.6.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.6.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20231220+cpu.torch1.6.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Linux",
+    "pytorch": "1.6.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.6.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20231220+cpu.torch1.6.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Windows",
+    "pytorch": "1.9.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.9.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20231022+cpu.torch1.9.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Windows",
+    "pytorch": "1.9.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.9.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20231022+cpu.torch1.9.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Windows",
+    "pytorch": "1.8.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.8.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20231022+cpu.torch1.8.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Windows",
+    "pytorch": "1.8.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.8.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20231022+cpu.torch1.8.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Windows",
+    "pytorch": "1.7.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.7.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20231022+cpu.torch1.7.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Windows",
+    "pytorch": "1.7.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.7.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20231022+cpu.torch1.7.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Windows",
+    "pytorch": "1.6.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.6.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20231022+cpu.torch1.6.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Windows",
+    "pytorch": "1.11.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.11.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20231022+cpu.torch1.11.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Windows",
+    "pytorch": "1.10.2",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.10.2 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20231022+cpu.torch1.10.2 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Windows",
+    "pytorch": "1.10.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.10.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20231022+cpu.torch1.10.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.4",
+    "os": "Windows",
+    "pytorch": "1.10.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.10.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.4.dev20231022+cpu.torch1.10.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Windows",
+    "pytorch": "2.0.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.0.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch2.0.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Windows",
+    "pytorch": "2.0.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.0.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch2.0.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Windows",
+    "pytorch": "1.9.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.9.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.9.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Windows",
+    "pytorch": "1.9.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.9.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.9.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Windows",
+    "pytorch": "1.8.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.8.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.8.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Windows",
+    "pytorch": "1.8.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.8.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.8.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Windows",
+    "pytorch": "1.7.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.7.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.7.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Windows",
+    "pytorch": "1.7.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.7.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.7.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Windows",
+    "pytorch": "1.6.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.6.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.6.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Windows",
+    "pytorch": "1.13.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.13.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.13.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Windows",
+    "pytorch": "1.13.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.13.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.13.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Windows",
+    "pytorch": "1.12.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.12.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.12.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Windows",
+    "pytorch": "1.12.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.12.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.12.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Windows",
+    "pytorch": "1.11.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.11.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.11.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Windows",
+    "pytorch": "1.10.2",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.10.2 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.10.2 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Windows",
+    "pytorch": "1.10.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.10.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.10.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Windows",
+    "pytorch": "1.10.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.10.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.10.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Macos",
+    "pytorch": "2.0.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.0.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch2.0.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Macos",
+    "pytorch": "2.0.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.0.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch2.0.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Macos",
+    "pytorch": "1.9.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.9.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.9.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Macos",
+    "pytorch": "1.9.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.9.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.9.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Macos",
+    "pytorch": "1.8.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.8.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.8.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Macos",
+    "pytorch": "1.8.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.8.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.8.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Macos",
+    "pytorch": "1.7.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.7.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.7.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Macos",
+    "pytorch": "1.7.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.7.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.7.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Macos",
+    "pytorch": "1.6.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.6.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.6.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Macos",
+    "pytorch": "1.13.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.13.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.13.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Macos",
+    "pytorch": "1.13.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.13.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.13.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Macos",
+    "pytorch": "1.12.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.12.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.12.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Macos",
+    "pytorch": "1.12.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.12.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.12.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Macos",
+    "pytorch": "1.11.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.11.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.11.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Macos",
+    "pytorch": "1.10.2",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.10.2 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.10.2 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Macos",
+    "pytorch": "1.10.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.10.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.10.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Macos",
+    "pytorch": "1.10.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.10.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.10.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "2.0.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.0.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch2.0.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "2.0.1",
+    "platform": "CUDA117",
+    "install": "# Install Pytorch\n    pip install torch==2.0.1 --index-url https://download.pytorch.org/whl/cu117\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cuda11.7.torch2.0.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "2.0.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==2.0.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch2.0.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.9.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.9.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.9.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.9.1",
+    "platform": "CUDA102",
+    "install": "# Install Pytorch\n    pip install torch==1.9.1 --index-url https://download.pytorch.org/whl/cu102\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cuda10.2.torch1.9.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.9.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.9.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.9.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.9.0",
+    "platform": "CUDA102",
+    "install": "# Install Pytorch\n    pip install torch==1.9.0 --index-url https://download.pytorch.org/whl/cu102\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cuda10.2.torch1.9.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.8.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.8.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.8.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.8.1",
+    "platform": "CUDA102",
+    "install": "# Install Pytorch\n    pip install torch==1.8.1 --index-url https://download.pytorch.org/whl/cu102\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cuda10.2.torch1.8.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.8.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.8.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.8.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.8.0",
+    "platform": "CUDA102",
+    "install": "# Install Pytorch\n    pip install torch==1.8.0 --index-url https://download.pytorch.org/whl/cu102\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cuda10.2.torch1.8.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.7.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.7.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.7.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.7.1",
+    "platform": "CUDA102",
+    "install": "# Install Pytorch\n    pip install torch==1.7.1 --index-url https://download.pytorch.org/whl/cu102\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cuda10.2.torch1.7.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.7.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.7.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.7.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.7.0",
+    "platform": "CUDA102",
+    "install": "# Install Pytorch\n    pip install torch==1.7.0 --index-url https://download.pytorch.org/whl/cu102\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cuda10.2.torch1.7.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.6.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.6.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.6.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.6.0",
+    "platform": "CUDA102",
+    "install": "# Install Pytorch\n    pip install torch==1.6.0 --index-url https://download.pytorch.org/whl/cu102\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cuda10.2.torch1.6.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.13.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.13.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.13.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.13.1",
+    "platform": "CUDA117",
+    "install": "# Install Pytorch\n    pip install torch==1.13.1 --index-url https://download.pytorch.org/whl/cu117\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cuda11.7.torch1.13.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.13.1",
+    "platform": "CUDA116",
+    "install": "# Install Pytorch\n    pip install torch==1.13.1 --index-url https://download.pytorch.org/whl/cu116\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cuda11.6.torch1.13.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.13.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.13.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.13.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.12.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.12.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.12.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.12.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.12.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.12.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.11.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.11.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.11.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.10.2",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.10.2 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.10.2 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.10.1",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.10.1 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.10.1 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.10.0",
+    "platform": "CPU",
+    "install": "# Install Pytorch\n    pip install torch==1.10.0 --index-url https://download.pytorch.org/whl/cpu\n\n    # Install k2\n    pip install k2==1.24.3.dev20230726+cpu.torch1.10.0 -f https://k2-fsa.github.io/k2/cpu.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.13.0",
+    "platform": "CUDA117",
+    "install": "# Install Pytorch\n    pip install torch==1.13.0 --index-url https://download.pytorch.org/whl/cu117\n\n    # Install k2\n    pip install k2==1.24.3.dev20230725+cuda11.7.torch1.13.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.13.0",
+    "platform": "CUDA116",
+    "install": "# Install Pytorch\n    pip install torch==1.13.0 --index-url https://download.pytorch.org/whl/cu116\n\n    # Install k2\n    pip install k2==1.24.3.dev20230725+cuda11.6.torch1.13.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.12.1",
+    "platform": "CUDA116",
+    "install": "# Install Pytorch\n    pip install torch==1.12.1 --index-url https://download.pytorch.org/whl/cu116\n\n    # Install k2\n    pip install k2==1.24.3.dev20230725+cuda11.6.torch1.12.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.12.1",
+    "platform": "CUDA113",
+    "install": "# Install Pytorch\n    pip install torch==1.12.1 --index-url https://download.pytorch.org/whl/cu113\n\n    # Install k2\n    pip install k2==1.24.3.dev20230725+cuda11.3.torch1.12.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.12.1",
+    "platform": "CUDA102",
+    "install": "# Install Pytorch\n    pip install torch==1.12.1 --index-url https://download.pytorch.org/whl/cu102\n\n    # Install k2\n    pip install k2==1.24.3.dev20230725+cuda10.2.torch1.12.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.12.0",
+    "platform": "CUDA116",
+    "install": "# Install Pytorch\n    pip install torch==1.12.0 --index-url https://download.pytorch.org/whl/cu116\n\n    # Install k2\n    pip install k2==1.24.3.dev20230725+cuda11.6.torch1.12.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.12.0",
+    "platform": "CUDA113",
+    "install": "# Install Pytorch\n    pip install torch==1.12.0 --index-url https://download.pytorch.org/whl/cu113\n\n    # Install k2\n    pip install k2==1.24.3.dev20230725+cuda11.3.torch1.12.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.12.0",
+    "platform": "CUDA102",
+    "install": "# Install Pytorch\n    pip install torch==1.12.0 --index-url https://download.pytorch.org/whl/cu102\n\n    # Install k2\n    pip install k2==1.24.3.dev20230725+cuda10.2.torch1.12.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.11.0",
+    "platform": "CUDA115",
+    "install": "# Install Pytorch\n    pip install torch==1.11.0 --index-url https://download.pytorch.org/whl/cu115\n\n    # Install k2\n    pip install k2==1.24.3.dev20230725+cuda11.5.torch1.11.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.11.0",
+    "platform": "CUDA113",
+    "install": "# Install Pytorch\n    pip install torch==1.11.0 --index-url https://download.pytorch.org/whl/cu113\n\n    # Install k2\n    pip install k2==1.24.3.dev20230725+cuda11.3.torch1.11.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.11.0",
+    "platform": "CUDA102",
+    "install": "# Install Pytorch\n    pip install torch==1.11.0 --index-url https://download.pytorch.org/whl/cu102\n\n    # Install k2\n    pip install k2==1.24.3.dev20230725+cuda10.2.torch1.11.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.10.2",
+    "platform": "CUDA102",
+    "install": "# Install Pytorch\n    pip install torch==1.10.2 --index-url https://download.pytorch.org/whl/cu102\n\n    # Install k2\n    pip install k2==1.24.3.dev20230725+cuda10.2.torch1.10.2 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.10.1",
+    "platform": "CUDA102",
+    "install": "# Install Pytorch\n    pip install torch==1.10.1 --index-url https://download.pytorch.org/whl/cu102\n\n    # Install k2\n    pip install k2==1.24.3.dev20230725+cuda10.2.torch1.10.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "1.10.0",
+    "platform": "CUDA102",
+    "install": "# Install Pytorch\n    pip install torch==1.10.0 --index-url https://download.pytorch.org/whl/cu102\n\n    # Install k2\n    pip install k2==1.24.3.dev20230725+cuda10.2.torch1.10.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "2.0.1",
+    "platform": "CUDA118",
+    "install": "# Install Pytorch\n    pip install torch==2.0.1 --index-url https://download.pytorch.org/whl/cu118\n\n    # Install k2\n    pip install k2==1.24.3.dev20230718+cuda11.8.torch2.0.1 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "2.0.0",
+    "platform": "CUDA118",
+    "install": "# Install Pytorch\n    pip install torch==2.0.0 --index-url https://download.pytorch.org/whl/cu118\n\n    # Install k2\n    pip install k2==1.24.3.dev20230718+cuda11.8.torch2.0.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  },
+  {
+    "build": "1.24.3",
+    "os": "Linux",
+    "pytorch": "2.0.0",
+    "platform": "CUDA117",
+    "install": "# Install Pytorch\n    pip install torch==2.0.0 --index-url https://download.pytorch.org/whl/cu117\n\n    # Install k2\n    pip install k2==1.24.3.dev20230718+cuda11.7.torch2.0.0 -f https://k2-fsa.github.io/k2/cuda.html\n    "
+  }
 ]

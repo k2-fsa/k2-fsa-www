@@ -6,6 +6,9 @@
     a {
       color: inherit !important;
     }
+    .matrix-k2-row {
+      flex-wrap: wrap;
+    }
     .matrix-k2-item-select {
       background-color: #005dc1 !important;
       color: white !important;
@@ -38,7 +41,7 @@
 
 {% block content %}
    <h1 id="k2"> k2 <a class="headerlink" href="#k2" title="Permanent link">&para;</a></h1>
-    <div class="container" id="app">
+    <div class="container" id="app" style="margin-bottom: 30px;">
 
       <div class="row">
         <div class="col-2 p-2 matrix-k2-head">
@@ -49,12 +52,13 @@
           {% endif %}
         </div>
         <div class="col-10">
-          <div class="d-flex">
+          <div class="d-flex matrix-k2-row">
             <div 
               v-for="(item, index) in build_list"
               @click="update_build(item)"
               class="p-2 flex-fill matrix-k2-item"
-              :class="{ 'matrix-k2-item-select': build==item }">[[ item ]]</div>
+              :class="{ 'matrix-k2-item-select': build==item }">[[ item ]]
+            </div>
           </div>
         </div>
       </div>
@@ -68,7 +72,7 @@
           {% endif %}
         </div>
         <div class="col-10">
-          <div class="d-flex">
+          <div class="d-flex matrix-k2-row">
             <div 
               v-for="(item, index) in os_list"
               @click="update_os(item)"
@@ -83,7 +87,7 @@
           Pytorch
         </div>
         <div class="col-10">
-          <div class="d-flex">
+          <div class="d-flex matrix-k2-row">
             <div 
               v-for="(item, index) in pytorch_list"
               @click="update_pytorch(item)"
@@ -102,7 +106,7 @@
           {% endif %}
         </div>
         <div class="col-10">
-          <div class="d-flex">
+          <div class="d-flex matrix-k2-row">
             <div 
               v-for="(item, index) in platform_list"
               @click="update_platform(index)"
