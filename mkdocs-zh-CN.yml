@@ -100,6 +100,8 @@ nav:
     - blog/index.md
   - 留言板:
     - message.md
+  - 资源文件:
+    - resources.md
 
 # Extensions
 markdown_extensions:
