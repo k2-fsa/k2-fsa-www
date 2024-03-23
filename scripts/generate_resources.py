@@ -1,9 +1,8 @@
 import requests
-from typing import Dict
+import re
+from typing import Dict, List, Set
 
-K2_CPU_PAGE="https://k2-fsa.github.io/k2/cpu.html"
-
-def generate_html(links: Dict[str, str]):
+def generate_html(resources: Dict[str, str]):
     html = """
     {% extends "main.html" %}
 
@@ -31,9 +30,8 @@ def generate_html(links: Dict[str, str]):
             <tbody>
     """
 
-    r = requests.get(K2_CPU_PAGE)
-    for line in r.text.split("<br/>"):
-        html += f"<tr><td>{line}</td></tr>"
+    for k, v in resources.items():
+        html += f'<tr><td><a href="{v}" target="_blank">{k}</a></td></tr>\n'
 
     html += """
             </tbody>
@@ -85,6 +83,48 @@ def generate_html(links: Dict[str, str]):
     """
     return html
 
-a = None
+def get_apks(link: str, resources: Dict[str, str]):
+    r = requests.get(link)
+    url_pattern = r"href=\"(.*)\".*>"
+    latest_version = None
+    for line in r.text.split("<br/>"):
+        m = re.search(url_pattern, line)
+        if m is None:
+            continue
+        url = m.group(1).strip()
+        name = url.split("/")[-1]
+        if name.endswith("apk"):
+            version = "-".join(name.split("-")[0:3])
+            if latest_version is None:
+                latest_version = version
+            else:
+                if version != latest_version:
+                    continue
+            resources[name] = url
+
+def get_releases(link: str, resources: Dict[str, str], tags: Set[str]):
+    r = requests.get(link)
+    releases = r.json()
+    for i, release in enumerate(releases):
+        if i == 0 or release["tag_name"] in tags:
+            for asset in release["assets"]:
+                url = asset["browser_download_url"]
+                name = url.split("/")[-1]
+                resources[name] = url
+
+
+SHERPA_ONNX_RELEASE="https://api.github.com/repos/k2-fsa/sherpa-onnx/releases"
+SHERPA_NCNN_RELEASE="https://api.github.com/repos/k2-fsa/sherpa-ncnn/releases"
+SP_ID_APK="https://k2-fsa.github.io/sherpa/onnx/speaker-identification/apk.html"
+TTS_APK="https://k2-fsa.github.io/sherpa/onnx/tts/apk.html"
+TTS_ENGINE_APK="https://k2-fsa.github.io/sherpa/onnx/tts/apk-engine.html"
+resources = {}
+
+get_apks(SP_ID_APK, resources)
+get_apks(TTS_APK, resources)
+get_apks(TTS_ENGINE_APK, resources)
+get_releases(SHERPA_ONNX_RELEASE, resources, set(["kws-models", "speaker-recongition-models", "tts-models", "asr-models"]))
+get_releases(SHERPA_NCNN_RELEASE, resources, set(["models"]))
+
 with open("custom/resources.html", "w") as f:
-    f.write(generate_html(a))
+    f.write(generate_html(resources))

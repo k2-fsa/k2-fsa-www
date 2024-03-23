@@ -95,8 +95,10 @@ nav:
     - KWS: demos/kws.md
   - Events: events.md
   - Publications: publications.md
+  - Resources: resources.md
   - Blog:
     - blog/index.md
+  - Message Board: message.md
 
 # Extensions
 markdown_extensions:

@@ -96,12 +96,10 @@ nav:
     - 自定义唤醒: demos/kws.md
   - 事件: events.md
   - 论文: publications.md
+  - 资源文件: resources.md
   - 博客:
     - blog/index.md
-  - 留言板:
-    - message.md
-  - 资源文件:
-    - resources.md
+  - 留言板: message.md
 
 # Extensions
 markdown_extensions:
