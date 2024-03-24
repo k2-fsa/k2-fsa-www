@@ -96,7 +96,7 @@ nav:
     - 自定义唤醒: demos/kws.md
   - 事件: events.md
   - 论文: publications.md
-  - 资源文件: resources.md
+  - 资源: resources.md
   - 博客:
     - blog/index.md
   - 留言板: message.md
@@ -111,6 +111,9 @@ markdown_extensions:
   - md_in_html
   - toc:
       permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem:

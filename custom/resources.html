@@ -20,7 +20,7 @@
     {% block content %}
     {{ super() }}
     <div style="margin: 20px 0px; width: 100%;">
-        <input id="search" style="width: 75%;" class="md-input md-input--stretch" placeholder="Type to search...">
+        <input id="search" style="width: 80%;" class="md-input md-input--stretch" placeholder="Type to search...">
         <table id="filelist">
             <tbody>
     <tr><td><a href="https://huggingface.co/csukuangfj/sherpa-onnx-apk/resolve/main/speaker-identification/sherpa-onnx-1.9.12-arm64-v8a-en-speaker-identification-3dspeaker-eres2net_sv_en_voxceleb_16k.apk" target="_blank">sherpa-onnx-1.9.12-arm64-v8a-en-speaker-identification-3dspeaker-eres2net_sv_en_voxceleb_16k.apk</a></td></tr>
@@ -1509,7 +1509,7 @@
         document.getElementById("search").addEventListener('keyup', function () {
             var i,
             // Word sequence _matching_ to input. All, except last, words must be _complete_.
-            e = "(^|.*[^\pL])" + this.value.trim().split(/\s+/).join("([^\pL]|[^\pL].*[^\pL])") + ".*$",
+            e = "(^|.*[^\pL])" + this.value.trim().split(/\s+/).join("([^\pL]|[^\pL].*[^\pL])") + ".*$";
             n = RegExp(e, "i");
             listItems.forEach(function(item) {
                 i = item.querySelector('td').textContent.replace(/\s+/g, " ");

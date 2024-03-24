@@ -98,7 +98,7 @@ nav:
   - Resources: resources.md
   - Blog:
     - blog/index.md
-  - Message Board: message.md
+  - Message board: message.md
 
 # Extensions
 markdown_extensions:
