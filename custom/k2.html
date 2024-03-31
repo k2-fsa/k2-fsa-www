@@ -43,7 +43,11 @@
 {% endblock %}
 
 {% block content %}
-   <h1 id="k2"> k2 <a class="headerlink" href="#k2" title="Permanent link">&para;</a></h1>
+  {% if config.theme.language == 'en' %}
+   <h1 id="installation"> Installation <a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
+  {% else %}
+   <h1 id="installation"> 安装 <a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
+  {% endif %}
     <div class="container" id="app" style="margin-bottom: 30px;">
 
       <div class="row">

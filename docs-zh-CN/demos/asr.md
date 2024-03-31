@@ -27,7 +27,6 @@ title: 语音识别演示
 | 英文         | zipformer  | ncnn        | [huggingface](https://huggingface.co/spaces/k2-fsa/web-assembly-asr-sherpa-ncnn-en){:target="_blank"} [modelscope](https://modelscope.cn/studios/k2-fsa/web-assembly-asr-sherpa-ncnn-en/summary){:target="_blank"}                                                 | [模型文档](https://k2-fsa.github.io/sherpa/ncnn/pretrained_models/zipformer-transucer-models.html#csukuangfj-sherpa-ncnn-streaming-zipformer-en-2023-02-13-english){:target="_blank"}                                                   |
 | 中英文       | zipformer  | ncnn        | [huggingface](https://huggingface.co/spaces/k2-fsa/web-assembly-asr-sherpa-ncnn-zh-en){:target="_blank"} [modelscope](https://modelscope.cn/studios/k2-fsa/web-assembly-asr-sherpa-ncnn-zh-en/summary){:target="_blank"}                                           | [模型文档](https://k2-fsa.github.io/sherpa/ncnn/pretrained_models/zipformer-transucer-models.html#csukuangfj-sherpa-ncnn-streaming-zipformer-bilingual-zh-en-2023-02-13-bilingual-chinese-english){:target="_blank"}                    |
 
-
 ### 视频字幕提取
 
 字幕提取功能是我们基于语音识别制作的一个小工具，用户只需上传视频即可生成对应的字幕文件，中文、英文、中英文、俄语体验地址：[Huggingface :hugging:](https://huggingface.co/spaces/k2-fsa/generate-subtitles-for-videos){:target="_blank"}, [Huggingface 镜像站](https://hf-mirror.com/spaces/k2-fsa/generate-subtitles-for-videos){:target="_blank"}。
