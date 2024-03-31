@@ -83,7 +83,7 @@ for k in sorted(k2_wheels.keys(), reverse=True):
             "os" : os,
             "pytorch" : v_torch,
             "platform" : platform if platform == "CPU" else f"CUDA{platform.replace('.', '')}",
-            "install" : v
+            "install" : v.replace("cpu.html", "cpu-cn.html") if platform == "CPU" else v.replace("cuda.html", "cuda-cn.html")
         })
         versions[v_k] = 1
 

@@ -1,92 +1,20 @@
 [
     {
-        "language" : "Chinese",
-        "mode" : "Streaming",
-        "engine" : "torch",
-        "encoder" : "zipformer2",
-        "type": "RNNT",
-        "download" : "# version 1\ngit lfs install\ngit clone https://huggingface.co/pkufool/icefall-asr-zipformer-libriheavy-punc-large-20230926",
-        "usage" : "https://k2-fsa.github.io/sherpa/onnx/kws/pretrained_models/index.html#sherpa-onnx-kws-pre-trained-models"
-    },
-    {
-        "language" : "Chinese",
-        "mode" : "Non streaming",
-        "engine" : "torch",
-        "encoder" : "zipformer2",
-        "type": "RNNT",
-        "download" : "git lfs install\ngit clone https://huggingface.co/pkufool/icefall-asr-zipformer-libriheavy-punc-large-20230926",
-        "usage" : "https://k2-fsa.github.io/sherpa/onnx/kws/pretrained_models/index.html#sherpa-onnx-kws-pre-trained-models"
-    },
-    {
-        "language" : "Chinese",
+        "language" : "English & Chinese",
         "mode" : "Streaming",
         "engine" : "onnx",
-        "encoder" : "zipformer2",
+        "encoder" : "zipformer",
         "type": "RNNT",
-        "download" : "git lfs install\ngit clone https://huggingface.co/pkufool/icefall-asr-zipformer-libriheavy-punc-large-20230926",
-        "usage" : "https://k2-fsa.github.io/sherpa/onnx/kws/pretrained_models/index.html#sherpa-onnx-kws-pre-trained-models"
+        "download" : "wget https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-streaming-zipformer-bilingual-zh-en-2023-02-20.tar.bz2",
+        "description": "This model is contributed by community users, trained on 10000+ hours inhouse data, #params is 80M.\nUsage:\nhttps://k2-fsa.github.io/sherpa/onnx/pretrained_models/online-transducer/zipformer-transducer-models.html#csukuangfj-sherpa-onnx-streaming-zipformer-bilingual-zh-en-2023-02-20-bilingual-chinese-english"
     },
     {
-        "language" : "English",
-        "mode" : "Streaming",
-        "engine" : "torch",
-        "encoder" : "zipformer2",
-        "type": "RNNT",
-        "download" : "# verison 2 \n\n git lfs install\ngit clone https://huggingface.co/pkufool/icefall-asr-zipformer-libriheavy-punc-large-20230926",
-        "usage" : "https://k2-fsa.github.io/sherpa/onnx/kws/pretrained_models/index.html#sherpa-onnx-kws-pre-trained-models"
-    },
-    {
-        "language" : "Chinese",
-        "mode" : "Non streaming",
-        "engine" : "ncnn",
-        "encoder" : "zipformer2",
-        "type": "RNNT",
-        "download" : "git lfs install\ngit clone https://huggingface.co/pkufool/icefall-asr-zipformer-libriheavy-punc-large-20230926",
-        "usage" : "https://k2-fsa.github.io/sherpa/onnx/kws/pretrained_models/index.html#sherpa-onnx-kws-pre-trained-models"
-    },
-    {
-        "language" : "Chinese",
-        "mode" : "Streaming",
-        "engine" : "torch",
-        "encoder" : "zipformer2",
-        "type": "CTC",
-        "download" : "git lfs install\ngit clone https://huggingface.co/pkufool/icefall-asr-zipformer-libriheavy-punc-large-20230926",
-        "usage" : "https://k2-fsa.github.io/sherpa/onnx/kws/pretrained_models/index.html#sherpa-onnx-kws-pre-trained-models"
-    },
-    {
-        "language" : "Chinese",
-        "mode" : "Streaming",
-        "engine" : "torch",
-        "encoder" : "zipformer2",
-        "type": "RNNT",
-        "download" : "git lfs install\ngit clone https://huggingface.co/pkufool/icefall-asr-zipformer-libriheavy-punc-large-20230926",
-        "usage" : "https://k2-fsa.github.io/sherpa/onnx/kws/pretrained_models/index.html#sherpa-onnx-kws-pre-trained-models"
-    },
-    {
-        "language" : "Chinese",
-        "mode" : "Streaming",
+        "language" : "English & Chinese",
+        "mode" : "streaming",
         "engine" : "torch",
         "encoder" : "zipformer",
         "type": "RNNT",
-        "download" : "git lfs install\ngit clone https://huggingface.co/pkufool/icefall-asr-zipformer-libriheavy-punc-large-20230926",
-        "usage" : "https://k2-fsa.github.io/sherpa/onnx/kws/pretrained_models/index.html#sherpa-onnx-kws-pre-trained-models"
-    },
-    {
-        "language" : "Chinese",
-        "mode" : "Streaming",
-        "engine" : "torch",
-        "encoder" : "zipformer",
-        "type": "AED",
-        "download" : "git lfs install\ngit clone https://huggingface.co/pkufool/icefall-asr-zipformer-libriheavy-punc-large-20230926",
-        "usage" : "https://k2-fsa.github.io/sherpa/onnx/kws/pretrained_models/index.html#sherpa-onnx-kws-pre-trained-models"
-    },
-    {
-        "language" : "Chinese",
-        "mode" : "Streaming",
-        "engine" : "torch",
-        "encoder" : "LSTM",
-        "type": "CTC",
-        "download" : "git lfs install\ngit clone https://huggingface.co/pkufool/icefall-asr-zipformer-libriheavy-punc-large-20230926",
-        "usage" : "https://k2-fsa.github.io/sherpa/onnx/kws/pretrained_models/index.html#sherpa-onnx-kws-pre-trained-models"
+        "download" : "git lfs install\ngit clone https://huggingface.co/pfluo/k2fsa-zipformer-chinese-english-mixed",
+        "description": "This model is contributed by community users, trained on 10000+ hours inhouse data, #params is 80M.\nThe pre-trained model above contains torch script models for sherpa inference, as well as all files needed for exporting model to onnx and ncnn."
     }
 ]
