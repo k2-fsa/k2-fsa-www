@@ -1,0 +1,29 @@
+[
+    {
+        "language" : "中英文",
+        "mode" : "流式",
+        "engine" : "onnx",
+        "encoder" : "zipformer",
+        "type": "RNNT",
+        "download" : "wget https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-streaming-zipformer-bilingual-zh-en-2023-02-20.tar.bz2",
+        "description": "本模型由社区开发者贡献，使用了数万小时的内部商用数据，模型参数量约为 80M。\n使用方法：\nhttps://k2-fsa.github.io/sherpa/onnx/pretrained_models/online-transducer/zipformer-transducer-models.html#csukuangfj-sherpa-onnx-streaming-zipformer-bilingual-zh-en-2023-02-20-bilingual-chinese-english"
+    },
+    {
+        "language" : "中英文",
+        "mode" : "流式",
+        "engine" : "torch",
+        "encoder" : "zipformer",
+        "type": "RNNT",
+        "download" : "git lfs install\ngit clone https://huggingface.co/pfluo/k2fsa-zipformer-chinese-english-mixed",
+        "description": "本模型由社区开发者贡献，使用了数万小时的内部商用数据，模型参数量约为 80M。\n上述地址包含了可用于 sherpa 推理的 torch script 模型，也包含可用于导出 onnx 和 ncnn 的所有文件。"
+    },
+    {
+        "language" : "中文",
+        "mode" : "流式",
+        "engine" : "onnx",
+        "encoder" : "zipformer",
+        "type": "RNNT",
+        "download" : "GIT_LFS_SKIP_SMUDGE=1 git clone https://huggingface.co/csukuangfj/sherpa-onnx-streaming-zipformer-zh-14M-2023-02-23\n\ncd sherpa-onnx-streaming-zipformer-zh-14M-2023-02-23\n\ngit lfs pull --include \".*onnx\"",
+        "description": "本模型使用 WenetSpeech L 训练，参数规模为 14M。\n使用方法:\nhttps://k2-fsa.github.io/sherpa/onnx/pretrained_models/online-transducer/zipformer-transducer-models.html#csukuangfj-sherpa-onnx-streaming-zipformer-zh-14m-2023-02-23-chinese"
+    }
+]

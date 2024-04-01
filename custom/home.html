@@ -1,0 +1,665 @@
+{% extends "main.html" %}
+
+{% block styles %}
+{{ super() }}
+  <style>
+    a {
+      color: inherit !important;
+    }
+  </style>
+<!-- MDB -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.css"/>
+<!-- <link href="assets/stylesheets/mdb.min.css" rel="stylesheet"> -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+{% endblock %}
+
+
+{% block tabs %}
+  {{ super() }}
+
+  <style>
+    .md-main__inner{
+      margin:0
+    }
+
+    .md-content{
+      display:none
+    }
+
+    @media screen and (min-width:60em){
+      .md-sidebar--secondary{
+        display:none
+      }
+    }
+
+    @media screen and (min-width:76.25em){
+      .md-sidebar--primary
+      {
+        display:none
+      }
+    }
+
+    body {
+      background-color: #fbfbfb;
+    }
+
+    .bg-theme {
+      background-color: #005dc1 !important;
+    }
+
+    .text-theme {
+      color: #005dc1 !important;
+    }
+
+    .border-theme {
+      border: 2px solid #005dc1 !important;
+    }
+
+    .btn-secondary-theme {
+      color: hsl(211, 100%, 38%);
+      box-shadow: none !important;
+      background-color: hsl(211, 110%, 94%);
+    }
+
+    .btn-secondary-theme:hover,
+    .btn-secondary-theme:focus {
+      background-color: hsl(211, 150%, 95%);
+      color: hsl(211, 100%, 35%);
+    }
+
+    .card-body{
+      padding: 10px;
+    }
+    .card-text {
+      font-size: 0.75rem;
+      font-weight: 0.75;
+    }
+    .card {
+      width: calc(33.33% - 24px);
+    }
+    @media screen and (max-width:768px){
+      .card {
+        width: 100%;
+      }
+    }
+
+    .card-body a:link {
+      color: #005dc1 !important;
+      background-color: transparent;
+      text-decoration: none;
+    }
+    .card-body a:visited {
+      color: #7446ac !important;
+      background-color: transparent;
+      text-decoration: none;
+    }
+    .card-body a:hover {
+      color: #7446ac !important;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    .card-body a:active {
+      color: #005dc1 !important;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    .card-body img {
+      width: 45px;
+      margin: 15px 15px 15px 0px;
+    }
+
+    .card-title {
+      margin: 20px 0px;
+    }
+  </style>
+<main class="mdb-docs-layout">
+<div class="container mt-5 mt-5  ">
+<section style="min-height: calc(100vh - 112px)" class="mt-md-4">
+  <div class="row">
+    <div class="col-md-6 mb-4 mb-md-0 d-flex align-items-center">
+      <div>
+        <h1 class="fw-bold h3">
+          {% if config.theme.language == 'en' %}
+          Next-gen Kaldi
+          {% else %}
+          新一代 Kaldi
+          {% endif %}
+          <br>
+          <small class="text-theme h4">
+            {% if config.theme.language == 'en' %}
+            for advanced &amp; efficient automatic speech recognition
+            {% else %}
+            极致性能 &amp; 运行高效的自动语音识别
+            {% endif %}
+          </small>
+        </h1>
+        <p class="text-muted">
+          {% if config.theme.language == 'en' %}
+          A collection of automatic recognition toolkits consisting of data preparation, sequence modeling, training, decoding, deploying.
+          {% else %}
+          包含语音数据处理、序列建模、模型训练、推理以及部署等的一整套智能语音技术研发工具集
+          {% endif %}
+        </p>
+        <div class="">
+          <ol class="list-unstyled my-5 text-muted">
+            <li class="mb-3">
+              <i class="fas fa-check text-theme me-2"></i>
+              {% if config.theme.language == 'en' %}
+              Fast training with <strong>pruned rnnt loss</strong>
+              {% else %}
+              使用 <strong>pruned rnnt loss</strong> 进行快速训练
+              {% endif %}
+            </li>
+            <li class="mb-3">
+              <i class="fas fa-check text-theme me-2"></i>
+              {% if config.theme.language == 'en' %}
+              Advanced <strong>zipformer</strong> for modeling
+              {% else %}
+              使用先进的 <strong>zipformer</strong> 建模
+              {% endif %}
+            </li>
+            <li class="mb-3">
+              <i class="fas fa-check text-theme me-2"></i>
+              {% if config.theme.language == 'en' %}
+              Easy to use, supporting many platforms
+              {% else %}
+              简单易用， 支持在各大主流平台部署
+              {% endif %} 
+            </li>
+            <li class="">
+              <i class="fas fa-check text-theme me-2"></i>
+              {% if config.theme.language == 'en' %}
+              Apache-2.0 license - free for personal &amp; commercial use
+              {% else %}
+              使用 Apache-2.0 开源协议 - 对商业应用非常友好
+              {% endif %}
+            </li>
+          </ol>
+
+          <a class="btn btn-lg bg-theme text-white me-3" href="get-started" role="button">
+            {% if config.theme.language == 'en' %}
+            Get started
+            {% else %}
+            从这开始
+            {% endif %}
+          </a>
+
+          <a class="btn btn-secondary-theme btn-lg me-3" data-mdb-smooth-scroll="smooth-scroll" data-mdb-offset="25"
+            data-mdb-ripple-color="hsl(265, 81.4%, 53.5%)" href="demos/asr" role="button">
+            {% if config.theme.language == 'en' %}
+            Demo
+            {% else %}
+            演示
+            {% endif %}
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4 mb-md-0 d-flex align-items-center">
+      <!-- Carousel wrapper -->
+      <div id="k2carousel" class="carousel slide carousel-fade" data-mdb-ride="carousel">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-mdb-target="#k2carousel"
+            data-mdb-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="k2"
+          ></button>
+          <button
+            type="button"
+            data-mdb-target="#k2carousel"
+            data-mdb-slide-to="1"
+            aria-label="lhotse"
+          ></button>
+          <button
+            type="button"
+            data-mdb-target="#k2carousel"
+            data-mdb-slide-to="2"
+            aria-label="icefall"
+          ></button>
+        </div>
+      
+        <!-- Inner -->
+        <div class="carousel-inner">
+          <!-- Single item -->
+          <div class="carousel-item active">
+            <img src="assets/pic/k2.jpg" class="d-block w-100" alt="k2"/>
+            <div class="carousel-caption d-none d-md-block">
+              <h5></h5>
+              <p>
+                {% if config.theme.language == 'en' %}
+                Core algorithms
+                {% else %}
+                核心算法
+                {% endif %}
+              </p>
+            </div>
+          </div>
+      
+          <!-- Single item -->
+          <div class="carousel-item">
+            <img src="assets/pic/lhotse.jpg" class="d-block w-100" alt="lhotse"/>
+            <div class="carousel-caption d-none d-md-block">
+              <h5></h5>
+              <p>
+                {% if config.theme.language == 'en' %}
+                Data preparation toolkit
+                {% else %}
+                数据准备工具
+                {% endif %}
+              </p>
+            </div>
+          </div>
+      
+          <!-- Single item -->
+          <div class="carousel-item">
+            <img src="assets/pic/icefall.jpg" class="d-block w-100" alt="icefall"/>
+            <div class="carousel-caption d-none d-md-block">
+              <h5></h5>
+              <p>
+                {% if config.theme.language == 'en' %}
+                Recipes
+                {% else %}
+                示例脚本
+                {% endif %}
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Inner -->
+      
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-mdb-target="#k2carousel" data-mdb-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">
+            {% if config.theme.language == 'en' %}
+            Previous
+            {% else %}
+            上一个
+            {% endif %}
+          </span>
+        </button>
+        <button class="carousel-control-next" type="button" data-mdb-target="#k2carousel" data-mdb-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">
+            {% if config.theme.language == 'en' %}
+            Next
+            {% else %}
+            下一个
+            {% endif %}
+          </span>
+        </button>
+      </div>
+      <!-- Carousel wrapper -->
+    </div>
+  </div>
+</section>
+
+<section class="mt-md-4">
+    <div style="padding: 0px 0px 20px 0px">
+        <h1 class="fw-bold h3">
+          {% if config.theme.language == 'en' %}
+          Projects
+          {% else %}
+          项目
+          {% endif %}
+        </h1>
+    </div>
+    <div class="d-flex flex-row flex-wrap" style="gap: 36px;">
+    <div class="card">
+       <div class="card-body">
+         <div class="d-flex flex-row">
+           <div> 
+               <img src="assets/pic/k2_logo.png"/>
+           </div>
+           <h5 class="card-title"> k2 </h5>
+         </div>
+         <p class="card-text">
+          {% if config.theme.language == 'en' %}
+          FSA/FST algorithms, differentiable, with PyTorch compatibility.
+          {% else %}
+          可微分有限状态自动机; 基于 FSA 的 GPU 解码算法；Pruned RNNT 损失函数等。
+          {% endif %}
+        </p>
+         <a href="https://github.com/k2-fsa/k2">
+          {% if config.theme.language == 'en' %}
+          Code
+          {% else %}
+          代码
+          {% endif %}
+        </a>
+         <a href="https://k2-fsa.github.io/k2/">
+          {% if config.theme.language == 'en' %}
+          Docs
+          {% else %}
+          文档
+          {% endif %}
+        </a>
+       </div>
+     </div>
+
+    <div class="card">
+       <div class="card-body">
+         <div class="d-flex flex-row">
+           <div> 
+               <img src="assets/pic/icefall_logo.png"/>
+           </div>
+           <h5 class="card-title"> icefall </h5>
+         </div>
+         <p class="card-text">
+          {% if config.theme.language == 'en' %}
+          Various of recipes built based on k2, lhotse and pytorch.
+          {% else %}
+          各流行数据集示例脚本集合，zipformer 模型的实现，训练解码代码，模型导出脚本等。
+          {% endif %}
+        </p>
+         <a href="https://github.com/k2-fsa/icefall">
+          {% if config.theme.language == 'en' %}
+          Code
+          {% else %}
+          代码
+          {% endif %}
+        </a>
+         <a href="https://k2-fsa.github.io/icefall/">
+          {% if config.theme.language == 'en' %}
+          Docs
+          {% else %}
+          文档
+          {% endif %}
+        </a>
+       </div>
+     </div>
+
+    <div class="card">
+       <div class="card-body">
+         <div class="d-flex flex-row">
+           <div> 
+               <img src="assets/pic/lhotse_logo.png"/>
+           </div>
+           <h5 class="card-title"> lhotse </h5>
+         </div>
+         <p class="card-text">
+          {% if config.theme.language == 'en' %}
+          Tools for handling speech data in machine learning projects.
+          {% else %}
+          语音数据集处理工具，流行数据集下载和预处理脚本，dataloader实现等。
+          {% endif %}
+        </p>
+         <a href="https://github.com/lhotse-speech/lhotse">
+          {% if config.theme.language == 'en' %}
+          Code
+          {% else %}
+          代码
+          {% endif %}
+        </a>
+         <a href="https://lhotse.readthedocs.io/en/latest/">
+          {% if config.theme.language == 'en' %}
+          Docs
+          {% else %}
+          文档
+          {% endif %}
+        </a>
+       </div>
+     </div>
+
+    <div class="card">
+       <div class="card-body">
+         <div class="d-flex flex-row">
+           <div> 
+               <img src="assets/pic/sherpa-logo.png"/>
+           </div>
+           <h5 class="card-title"> sherpa </h5>
+         </div>
+         <p class="card-text">
+          {% if config.theme.language == 'en' %}
+          Speech-to-text server framework (based on libtorch) with next-gen Kaldi
+          {% else %}
+          Libtorch 为推理引擎的语音识别服务框架，主要支持服务端高并发，以 Python 接口为主。
+          {% endif %}
+        </p>
+         <a href="https://github.com/k2-fsa/sherpa">
+          {% if config.theme.language == 'en' %}
+          Code
+          {% else %}
+          代码
+          {% endif %}
+        </a>
+         <a href="https://k2-fsa.github.io/sherpa/">
+          {% if config.theme.language == 'en' %}
+          Docs
+          {% else %}
+          文档
+          {% endif %}
+        </a>
+       </div>
+    </div>
+
+    <div class="card">
+       <div class="card-body">
+         <div class="d-flex flex-row">
+           <div> 
+               <img src="assets/pic/sherpa-logo.png"/>
+           </div>
+           <h5 class="card-title"> sherpa-onnx </h5>
+         </div>
+         <p class="card-text">
+          {% if config.theme.language == 'en' %}
+          Speech-to-text server framework (based on onnxruntime) with next-gen Kaldi
+          {% else %}
+          Onnxruntime 为推理引擎的语音服务框架，支持服务器端和设备端，拥有众多编程语言接口，支持语音识别、说话人识别、自定义唤醒词和 TTS 等。
+          {% endif %}
+        </p>
+         <a href="https://github.com/k2-fsa/sherpa-onnx">
+          {% if config.theme.language == 'en' %}
+          Code
+          {% else %}
+          代码
+          {% endif %}
+        </a>
+         <a href="https://k2-fsa.github.io/sherpa/onnx/">
+          {% if config.theme.language == 'en' %}
+          Docs
+          {% else %}
+          文档
+          {% endif %}
+        </a>
+       </div>
+    </div>
+
+    <div class="card">
+       <div class="card-body">
+         <div class="d-flex flex-row">
+           <div> 
+               <img src="assets/pic/sherpa-logo.png"/>
+           </div>
+           <h5 class="card-title"> sherpa-ncnn </h5>
+         </div>
+         <p class="card-text">
+          {% if config.theme.language == 'en' %}
+          Speech-to-text server framework (based on ncnn) with next-gen Kaldi
+          {% else %}
+          NCNN 为推理引擎的语音服务框架，主打设备端部署，拥有众多编程语言接口，极低资源需求。
+          {% endif %}
+        </p>
+         <a href="https://github.com/k2-fsa/sherpa-ncnn">
+          {% if config.theme.language == 'en' %}
+          Code
+          {% else %}
+          代码
+          {% endif %}
+        </a>
+         <a href="https://k2-fsa.github.io/sherpa/ncnn/">
+          {% if config.theme.language == 'en' %}
+          Docs
+          {% else %}
+          文档
+          {% endif %}
+        </a>
+       </div>
+    </div>
+  </div>
+
+  <div class="d-flex flex-row flex-wrap" style="padding-top: 30px; gap: 36px;">
+    <div class="card">
+       <div class="card-body">
+         <h5 class="card-title">fast rnnt</h5>
+         <p class="card-text">
+          {% if config.theme.language == 'en' %}
+          A torch implementation of a recursion which turns out to be useful for RNN-T.
+          {% else %}
+          Pruned RNNT 的单独仓库，只依赖于 Pytorch，无需安装 k2 也能使用 Pruned RNNT 损失函数。
+          {% endif %}
+        </p>
+         <a href="https://github.com/danpovey/fast_rnnt">
+          {% if config.theme.language == 'en' %}
+          Code
+          {% else %}
+          代码
+          {% endif %}
+        </a>
+       </div>
+    </div>
+
+    <div class="card">
+       <div class="card-body">
+         <h5 class="card-title">text search</h5>
+         <p class="card-text">
+          {% if config.theme.language == 'en' %}
+          Some fast-ish algorithms for batch text search in moderate-sized collections, intended for data cleanup.
+          {% else %}
+          以有声书资源构建语音识别数据集的完整方案，内含Libriheavy 数据集构建流程。
+          {% endif %}
+        </p>
+         <a href="https://github.com/k2-fsa/text_search">
+          {% if config.theme.language == 'en' %}
+          Code
+          {% else %}
+          代码
+          {% endif %}
+        </a>
+       </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Libriheavy</h5>
+          <p class="card-text">
+            {% if config.theme.language == 'en' %}
+            Libriheavy: a 50,000 hours ASR corpus with punctuation casing and context.
+            {% else %}
+            基于有声书的 50000 小时开源英文数据集，标注包含大小写和标点符号以及文本上文。
+            {% endif %}
+        </p>
+          <a href="https://github.com/k2-fsa/libriheavy">
+            {% if config.theme.language == 'en' %}
+            Code
+            {% else %}
+            代码
+            {% endif %}
+        </a>
+        </div>
+    </div>
+    <div class="card">
+       <div class="card-body">
+         <h5 class="card-title">multi-quantization</h5>
+         <p class="card-text">
+          {% if config.theme.language == 'en' %}
+          Implements a utility for use with PyTorch, for training an efficient quantizer based on multiple single-byte codebooks.
+          {% else %}
+          基于 Pytorch 的多码本量化器的训练脚本。
+          {% endif %}
+        </p>
+         <a href="https://github.com/k2-fsa/multi_quantization">
+          {% if config.theme.language == 'en' %}
+          Code
+          {% else %}
+          代码
+          {% endif %}
+        </a>
+       </div>
+    </div>
+
+    <div class="card">
+       <div class="card-body">
+         <h5 class="card-title">kaldifst</h5>
+         <p class="card-text">
+          {% if config.theme.language == 'en' %}
+          Python wrapper for OpenFST and its extensions from Kaldi. Also support reading/writing ark/scp files.
+          {% else %}
+          包含 Kaldi 拓展的 OpenFST python 接口，基于 pybind11 构建，不依赖于 Kaldi。
+          {% endif %}
+        </p>
+         <a href="https://github.com/k2-fsa/kaldifst">
+          {% if config.theme.language == 'en' %}
+          Code
+          {% else %}
+          代码
+          {% endif %}
+        </a>
+         <a href="https://k2-fsa.github.io/kaldifst/">
+          {% if config.theme.language == 'en' %}
+          Docs
+          {% else %}
+          文档
+          {% endif %}
+        </a>
+       </div>
+  </div>
+  <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">kaldi-decoder</h5>
+        <p class="card-text">
+          {% if config.theme.language == 'en' %}
+          Decoders from Kaldi using OpenFst.
+          {% else %}
+          基于 OpenFst 的 Kaldi 解码器，安装方便，不依赖于 Kaldi。
+          {% endif %}
+      </p>
+        <a href="https://github.com/k2-fsa/kaldi-decoder">
+          {% if config.theme.language == 'en' %}
+          Code
+          {% else %}
+          代码
+          {% endif %}
+      </a>
+      </div>
+  </div>
+  <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">divide lm</h5>
+        <p class="card-text">
+        {% if config.theme.language == 'en' %}
+        Divide a higher order language model with a lower order language model.
+        {% else %}
+        将两个 ngram 语言模型相减的脚本(高阶减低阶)。
+        {% endif %}
+      </p>
+        <a href="https://github.com/k2-fsa/devide_lm">
+        {% if config.theme.language == 'en' %}
+        Code
+        {% else %}
+        代码
+        {% endif %}
+      </a>
+      </div>
+  </div>
+  </div>
+</section>
+</div>
+</main>
+
+{% endblock %}
+
+{% block content %}{% endblock %}
+
+{% block scripts %}
+  <!-- MDB -->
+  <!-- <script type="text/javascript" src="assets/javascripts/mdb.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.js"></script>
+
+  {{ super() }}
+
+{% endblock %}

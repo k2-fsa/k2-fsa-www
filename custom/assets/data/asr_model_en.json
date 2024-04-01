@@ -1,0 +1,20 @@
+[
+    {
+        "language" : "English & Chinese",
+        "mode" : "Streaming",
+        "engine" : "onnx",
+        "encoder" : "zipformer",
+        "type": "RNNT",
+        "download" : "wget https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-streaming-zipformer-bilingual-zh-en-2023-02-20.tar.bz2",
+        "description": "This model is contributed by community users, trained on 10000+ hours inhouse data, #params is 80M.\nUsage:\nhttps://k2-fsa.github.io/sherpa/onnx/pretrained_models/online-transducer/zipformer-transducer-models.html#csukuangfj-sherpa-onnx-streaming-zipformer-bilingual-zh-en-2023-02-20-bilingual-chinese-english"
+    },
+    {
+        "language" : "English & Chinese",
+        "mode" : "streaming",
+        "engine" : "torch",
+        "encoder" : "zipformer",
+        "type": "RNNT",
+        "download" : "git lfs install\ngit clone https://huggingface.co/pfluo/k2fsa-zipformer-chinese-english-mixed",
+        "description": "This model is contributed by community users, trained on 10000+ hours inhouse data, #params is 80M.\nThe pre-trained model above contains torch script models for sherpa inference, as well as all files needed for exporting model to onnx and ncnn."
+    }
+]

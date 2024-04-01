@@ -1,0 +1,101 @@
+{% if page.meta.comments %}
+
+<h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
+
+  {% if config.theme.language == 'zh' %}
+  <blockquote>
+    如果您通过 github 登录评论有困难，可以在留言板把你的问题告诉我们。<br>
+    您也可以加入我们的<a href="https://k2-fsa.org/assets/pic/wechat_group.jpg" target="_blank">微信</a>和<a href="https://k2-fsa.org/assets/pic/qq_group.jpeg" target="_blank">QQ</a>群与广大开发者一起交流，也欢迎大家关注我们的<a href="https://k2-fsa.org/assets/pic/wechat_account.jpg" target="_blank">微信公众号</a>。
+  </blockquote>
+  {% endif %}
+  <!-- Insert generated snippet here -->
+
+  <!-- Synchronize Giscus theme with palette -->
+  {% if config.theme.language == 'en' %}
+  <script src="https://giscus.app/client.js"
+        data-repo="k2-fsa/ngk-giscus"
+        data-repo-id="R_kgDOKWTZ-Q"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOKWTZ-c4CZgRl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+  {% else %}
+  <script src="https://giscus.app/client.js"
+        data-repo="k2-fsa/ngk-giscus"
+        data-repo-id="R_kgDOKWTZ-Q"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOKWTZ-c4CZgRl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+  {% endif %}
+{% endif %}

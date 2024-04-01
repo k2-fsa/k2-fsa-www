@@ -1,0 +1,252 @@
+{% extends "main.html" %}
+
+{% block styles %}
+{{ super() }}
+  <style>
+    .md-tabs__item a {
+      color: inherit;
+    }
+    .md-nav__item a {
+      color: inherit;
+    }
+    .matrix-k2-row {
+      flex-wrap: wrap;
+    }
+    .matrix-k2-item-select {
+      background-color: #005dc1 !important;
+      color: white !important;
+    }
+    .matrix-k2-item {
+      background-color: hsl(211, 150%, 95%);
+      text-align: center;
+      margin: 2px 2px;
+      border-radius: 0px;
+    }
+    .matrix-k2-install {
+      background-color: hsl(211, 150%, 95%);
+      margin: 2px 2px;
+      border-radius: 0px;
+      font-size: 14px;
+      white-space: pre-line;
+    }
+    .matrix-k2-head {
+      font-size: 18px;
+    }
+    .md-typeset h1 {
+      display:block;
+    }
+    
+  </style>
+<!-- MDB -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.css"/>
+<!-- <link rel="stylesheet" href="../../assets/stylesheets/mdb.min.css"/> -->
+{% endblock %}
+
+{% block content %}
+  {% if config.theme.language == 'en' %}
+   <h1 id="installation"> Installation <a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
+  {% else %}
+   <h1 id="installation"> 安装 <a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
+  {% endif %}
+    <div class="container" id="app" style="margin-bottom: 30px;">
+
+      <div class="row">
+        <div class="col-2 p-2 matrix-k2-head">
+          {% if config.theme.language == 'en' %}
+          Build
+          {% else %}
+          版本
+          {% endif %}
+        </div>
+        <div class="col-10">
+          <div class="d-flex matrix-k2-row">
+            <div 
+              v-for="(item, index) in build_list"
+              @click="update_build(item)"
+              class="p-2 flex-fill matrix-k2-item"
+              :class="{ 'matrix-k2-item-select': build==item }">[[ item ]]
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-2 p-2 matrix-k2-head">
+          {% if config.theme.language == 'en' %}
+          OS
+          {% else %}
+          操作系统
+          {% endif %}
+        </div>
+        <div class="col-10">
+          <div class="d-flex matrix-k2-row">
+            <div 
+              v-for="(item, index) in os_list"
+              @click="update_os(item)"
+              class="p-2 flex-fill matrix-k2-item"
+              :class="{ 'matrix-k2-item-select': os==item }">[[ item ]]</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-2 p-2 matrix-k2-head">
+          Pytorch
+        </div>
+        <div class="col-10">
+          <div class="d-flex matrix-k2-row">
+            <div 
+              v-for="(item, index) in pytorch_list"
+              @click="update_pytorch(item)"
+              class="p-2 flex-fill matrix-k2-item"
+              :class="{ 'matrix-k2-item-select': pytorch==item }">[[ item ]]</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-2 p-2 matrix-k2-head">
+          {% if config.theme.language == 'en' %}
+          Platform
+          {% else %}
+          平台
+          {% endif %}
+        </div>
+        <div class="col-10">
+          <div class="d-flex matrix-k2-row">
+            <div 
+              v-for="(item, index) in platform_list"
+              @click="update_platform(index)"
+              class="p-2 flex-fill matrix-k2-item"
+              :class="{ 'matrix-k2-item-select': platform==item }">[[ item ]]</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-2 p-2 matrix-k2-head">
+          {% if config.theme.language == 'en' %}
+          Install
+          {% else %}
+          安装方法
+          {% endif %}
+        </div>
+        <div class="col-10">
+            <div class="p-2 matrix-k2-install">[[ install ]]</div>
+        </div>
+      </div>
+
+    </div>
+  <!-- </main> -->
+  {{ super() }}
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script src="https://unpkg.com/vue@3.4.19/dist/vue.global.prod.js"></script>
+  <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script> -->
+  <!-- MDB -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.js"></script>
+  <!-- <script src="../../assets/javascripts/mdb.min.js"></script>  -->
+  <!-- <script src="../../assets/javascripts/vue.global.js"></script> -->
+  <script>
+    const { createApp } = Vue
+
+    createApp({
+      delimiters: ["[[", "]]"],
+      data() {
+        return {
+          build: '',
+          os: '',
+          pytorch: '',
+          platform: '',
+          install: '',
+          build_list: [],
+          build_indexes: [],
+          os_list: [],
+          os_indexes: [],
+          pytorch_list: [],
+          pytorch_indexes: [],
+          platform_list: [],
+          platform_indexes: [],
+          sources: [],
+        }
+      },
+      mounted() {
+        let that = this;
+        var path = '';
+        if (document.documentElement.lang == "en") {
+          path = "../../assets/data/k2_whl_en.json";
+        } else {
+          path = "../../assets/data/k2_whl_cn.json";
+        }
+        window.fetch(path).then(
+          function(response) {
+            return response.json();
+        }).then(function(data) {
+            that.sources = data;
+            that.init();
+        })
+      },
+      methods: {
+        get_item_list(indexes, key) {
+          var item_list = [];
+          for (let i = 0; i < indexes.length; ++i) {
+            let index = indexes[i];
+            let item = this.sources[index];
+            if (item_list.includes(item[key])) {
+              continue;
+            } else {
+              item_list.push(item[key]);
+            }
+          }
+          return item_list;
+        },
+        get_index_list(indexes, key, value) {
+          var index_list = [];
+          for (let i = 0; i < indexes.length; ++i) {
+            let index = indexes[i];
+            let item = this.sources[index];
+            if (item[key] == value) {
+              index_list.push(index);
+            }
+          }
+          return index_list;
+        },
+        init() {
+          for (let i = 0; i < this.sources.length; ++i) {
+            this.build_indexes.push(i);
+          }
+          this.build_list = this.get_item_list(this.build_indexes, "build");
+          this.update_build(this.build_list[0])
+          console.log("build: " + this.build_list);
+        },
+        update_build(item) {
+          this.build = item;
+          this.os_indexes = this.get_index_list(this.build_indexes, "build", item);
+          this.os_list = this.get_item_list(this.os_indexes, "os");
+          this.update_os(this.os_list[0]);
+          console.log("os: " + this.os_list);
+        },
+        update_os(item) {
+          this.os = item;
+          this.pytorch_indexes = this.get_index_list(this.os_indexes, "os", item);
+          this.pytorch_list = this.get_item_list(this.pytorch_indexes, "pytorch");
+          this.update_pytorch(this.pytorch_list[0]);
+          console.log("pytorch: " + this.pytorch_list);
+        },
+        update_pytorch(item) {
+          this.pytorch = item;
+          this.platform_indexes = this.get_index_list(this.pytorch_indexes, "pytorch", item);
+          this.platform_list = this.get_item_list(this.platform_indexes, "platform");
+          this.update_platform(0);
+          console.log("platform: " + this.platform_list);
+        },
+        update_platform(item) {
+          this.platform = this.platform_list[item];
+          this.install = this.sources[this.platform_indexes[item]].install
+        },
+      },
+    }).mount('#app')
+  </script>
+{% endblock %}
