@@ -63,7 +63,7 @@ jobs:
         server=${{ secrets.K2_HOST }}
         port=${{ secrets.K2_PORT }}
         echo "${{ secrets.K2_KEY }}" > id_rsa && chmod 600 id_rsa
-        scp -P $port -r -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i id_rsa site/* $user@$server:~/www/k2-fsa
+        scp -P $port -r -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i id_rsa site/* $user@$server:~/www
         rm id_rsa
 
     - name: Build pages for kingway.fun/k2
