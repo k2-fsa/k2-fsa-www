@@ -20,7 +20,7 @@ on:
   push:
     branches:
       - master
-      - main_page
+
 jobs:
 
   build:
