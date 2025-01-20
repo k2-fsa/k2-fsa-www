@@ -20,6 +20,14 @@ on:
   push:
     branches:
       - master
+  schedule:
+  # minute (0-59)
+  # hour (0-23)
+  # day of the month (1-31)
+  # month (1-12)
+  # day of the week (0-6)
+  # nightly build at 23:50 UTC time every day
+  - cron: "50 23 * * *"
 
 jobs:
 
@@ -64,23 +72,4 @@ jobs:
         port=${{ secrets.K2_PORT }}
         echo "${{ secrets.K2_KEY }}" > id_rsa && chmod 600 id_rsa
         scp -P $port -r -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i id_rsa site/* $user@$server:~/www
-        rm id_rsa
-
-    - name: Build pages for kingway.fun/k2
-      if: github.repository_owner == 'pkufool'
-      shell: bash
-      run: |
-        sed -i 's/link: \//link: \/k2\//g' mkdocs.yml
-        sed -i 's/link: \//link: \/k2\//g' mkdocs-zh-CN.yml
-        mkdocs build -f mkdocs.yml
-        mkdocs build -f mkdocs-zh-CN.yml
-
-    - name: Deploy pages to kingway.fun/k2
-      if: github.repository_owner == 'pkufool'
-      run: |
-        user=${{ secrets.USERNAME }}
-        server=${{ secrets.HOST }}
-        port=${{ secrets.PORT }}
-        echo "${{ secrets.KEY }}" > id_rsa && chmod 600 id_rsa
-        scp -P $port -r -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i id_rsa site/* $user@$server:~/deploy/k2
         rm id_rsa
